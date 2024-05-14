@@ -30,37 +30,11 @@
     
     
     <entry>
-      <title>stduy-task</title>
-      <link href="/2024/04/23/stduy-task/"/>
-      <url>/2024/04/23/stduy-task/</url>
-      
-        <content type="html"><![CDATA[<h1 id="1-daily-task"><a href="#1-daily-task" class="headerlink" title="1.daily task"></a>1.daily task</h1><h2 id="1-1-basic-task"><a href="#1-1-basic-task" class="headerlink" title="1.1 basic task"></a>1.1 basic task</h2><ul><li><input disabled="" type="checkbox"> crash course-statistics-relax</li><li><input checked="" disabled="" type="checkbox"> statistics-study-1hours</li><li><input disabled="" type="checkbox"> statistics-homework</li><li><input disabled="" type="checkbox"> math-study-2hours</li></ul><h2 id="1-2-extra-task"><a href="#1-2-extra-task" class="headerlink" title="1.2 extra task"></a>1.2 extra task</h2><ul><li><input checked="" disabled="" type="checkbox"> install VMware &amp; kali system</li><li><input checked="" disabled="" type="checkbox"> hupochat.top域名解析</li><li><input disabled="" type="checkbox"> hexo-blog-butterfly theme优化</li><li><input disabled="" type="checkbox"> python-luffy-1 course</li></ul><h1 id="2-daily-learning"><a href="#2-daily-learning" class="headerlink" title="2.daily learning"></a>2.daily learning</h1><p>1.高代-线性变换与矩阵</p><p>2.统计学-平均数-离散程度</p><h1 id="3-daily-thing"><a href="#3-daily-thing" class="headerlink" title="3.daily thing"></a>3.daily thing</h1><p>1.第一次安装固态硬盘</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>My first blog</title>
       <link href="/2024/04/23/My-first-blog/"/>
       <url>/2024/04/23/My-first-blog/</url>
       
         <content type="html"><![CDATA[<h1 id="大事件"><a href="#大事件" class="headerlink" title="大事件"></a>大事件</h1><p>芜湖！成功部署blog！૮(˶ᵔ ᵕ ᵔ˶)ა</p><p>以后就在这上面写学习总结输出了！</p><p>之后还要完善页面渲染哈，今天就先收工啦 ૮(∪｡∪)ა｡｡｡zzzzz</p>]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2024/04/23/hello-world/"/>
-      <url>/2024/04/23/hello-world/</url>
-      
-        <content type="html"><![CDATA[<p>官方默认生成的页面</p><p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
       
       
       
