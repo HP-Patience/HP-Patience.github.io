@@ -1,17 +1,17 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>🍉Book-3章-线性模型 | HP-Patience_blog</title><meta name="author" content="HP-Patience"><meta name="copyright" content="HP-Patience"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="所需数学知识 求偏导 矩阵求导 求逆矩阵  名词解释1.序关系 有序：属性之间可进行相对比较（如大、中、小） 无序：属性之间不可进行相对比较（如南瓜、西瓜、冬瓜） 2.符号arg与s.t. arg：即argument（参数），用于表示求出指定函数时的**参数取值**     例如：     arg min 就是使后面这个式子达到最小值时的 变量的取值     arg max 就是使后面这个式子达到">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>🍉Book-3章-线性模型 | HP-Patience_blog</title><meta name="author" content="HP-Patience"><meta name="copyright" content="HP-Patience"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="所需数学知识  求偏导 矩阵求导 求逆矩阵  名词解释 1.序关系 有序：属性之间可进行相对比较（如大、中、小） 无序：属性之间不可进行相对比较（如南瓜、西瓜、冬瓜）  2.符号arg与s.t. arg：即argument（参数），用于表示求出指定函数时的**参数取值** 	例如： 	arg min 就是使后面这个式子达到最小值时的 变量的取值 	arg max 就是使后面这个式子达到最大值时的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="🍉Book-3章-线性模型">
 <meta property="og:url" content="https://hp-patience.github.io/2024/05/16/%F0%9F%8D%89Book-3%E7%AB%A0-%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/index.html">
 <meta property="og:site_name" content="HP-Patience_blog">
-<meta property="og:description" content="所需数学知识 求偏导 矩阵求导 求逆矩阵  名词解释1.序关系 有序：属性之间可进行相对比较（如大、中、小） 无序：属性之间不可进行相对比较（如南瓜、西瓜、冬瓜） 2.符号arg与s.t. arg：即argument（参数），用于表示求出指定函数时的**参数取值**     例如：     arg min 就是使后面这个式子达到最小值时的 变量的取值     arg max 就是使后面这个式子达到">
+<meta property="og:description" content="所需数学知识  求偏导 矩阵求导 求逆矩阵  名词解释 1.序关系 有序：属性之间可进行相对比较（如大、中、小） 无序：属性之间不可进行相对比较（如南瓜、西瓜、冬瓜）  2.符号arg与s.t. arg：即argument（参数），用于表示求出指定函数时的**参数取值** 	例如： 	arg min 就是使后面这个式子达到最小值时的 变量的取值 	arg max 就是使后面这个式子达到最大值时的">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://source.fomal.cc/img/default_cover_12.webp">
+<meta property="og:image" content="https://source.fomal.cc/img/default_cover_10.webp">
 <meta property="article:published_time" content="2024-05-16T15:16:46.000Z">
-<meta property="article:modified_time" content="2024-05-18T17:38:05.268Z">
+<meta property="article:modified_time" content="2024-05-18T18:09:08.164Z">
 <meta property="article:author" content="HP-Patience">
 <meta property="article:tag" content="学习记录">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://source.fomal.cc/img/default_cover_12.webp"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://hp-patience.github.io/2024/05/16/%F0%9F%8D%89Book-3%E7%AB%A0-%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+<meta name="twitter:image" content="https://source.fomal.cc/img/default_cover_10.webp"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://hp-patience.github.io/2024/05/16/%F0%9F%8D%89Book-3%E7%AB%A0-%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
   root: '/',
   algolia: undefined,
   localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
@@ -56,7 +56,7 @@
   isHome: false,
   isHighlightShrink: false,
   isToc: true,
-  postUpdate: '2024-05-19 01:38:05'
+  postUpdate: '2024-05-19 02:09:08'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -157,7 +157,7 @@
         }
       }
       detectApple()
-    })(window)</script><link rel="stylesheet" href="/css/categories_dark_fit.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-categories-card@1.0.0/lib/categorybar.css"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.2.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
+    })(window)</script><link rel="stylesheet" href="/css/categories_dark_fit.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-categories-card@1.0.0/lib/categorybar.css"><link rel="stylesheet" href="https://unpkg.zhimg.com/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.min.css" media="print" onload="this.media='all'"><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.2.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>(()=>{
   const $loadingBox = document.getElementById('loading-box')
   const $body = document.body
   const preloader = {
@@ -178,189 +178,175 @@
     document.addEventListener('pjax:send', () => { preloader.initLoading() })
     document.addEventListener('pjax:complete', () => { preloader.endLoading() })
   }
-})()</script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/HP-Patience/HP-Patience.github.io/main/avatar_img/cat.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://source.fomal.cc/img/default_cover_12.webp')"><nav id="nav"><span id="blog-info"><a href="/" title="HP-Patience_blog"><span class="site-name">HP-Patience_blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">🍉Book-3章-线性模型</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-05-16T15:16:46.000Z" title="发表于 2024-05-16 23:16:46">2024-05-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-05-18T17:38:05.268Z" title="更新于 2024-05-19 01:38:05">2024-05-19</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%F0%9F%8D%89Book/">🍉Book</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>8分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="🍉Book-3章-线性模型"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="所需数学知识"><a href="#所需数学知识" class="headerlink" title="所需数学知识"></a>所需数学知识</h1><ol>
-<li>求偏导</li>
-<li>矩阵求导</li>
-<li>求逆矩阵</li>
+})()</script><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/HP-Patience/HP-Patience.github.io/main/avatar_img/cat.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://source.fomal.cc/img/default_cover_10.webp')"><nav id="nav"><span id="blog-info"><a href="/" title="HP-Patience_blog"><span class="site-name">HP-Patience_blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 列表</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">🍉Book-3章-线性模型</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-05-16T15:16:46.000Z" title="发表于 2024-05-16 23:16:46">2024-05-16</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-05-18T18:09:08.164Z" title="更新于 2024-05-19 02:09:08">2024-05-19</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%F0%9F%8D%89Book/">🍉Book</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>8分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="🍉Book-3章-线性模型"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1>所需数学知识</h1>
+<ol>
+<li class="lvl-3">求偏导</li>
+<li class="lvl-3">矩阵求导</li>
+<li class="lvl-3">求逆矩阵</li>
 </ol>
-<h1 id="名词解释"><a href="#名词解释" class="headerlink" title="名词解释"></a>名词解释</h1><p>1.<strong>序关系</strong></p>
+<h1>名词解释</h1>
+<p>1.<strong>序关系</strong></p>
 <pre><code>有序：属性之间可进行相对比较（如大、中、小）
 无序：属性之间不可进行相对比较（如南瓜、西瓜、冬瓜）
-</code></pre><p>2.<strong>符号</strong>arg与s.t.</p>
+</code></pre>
+<p>2.<strong>符号</strong>arg与s.t.</p>
 <pre><code>arg：即argument（参数），用于表示求出指定函数时的**参数取值**
-    例如：
-    arg min 就是使后面这个式子达到最小值时的 变量的取值
-    arg max 就是使后面这个式子达到最大值时的 变量的取值
-
+	例如：
+	arg min 就是使后面这个式子达到最小值时的 变量的取值
+	arg max 就是使后面这个式子达到最大值时的 变量的取值
+	
 s.t.：即subject to，意思是受限于...，后面紧跟约束条件
-</code></pre><p>3.<strong>闭式解</strong></p>
+</code></pre>
+<p>3.<strong>闭式解</strong></p>
 <pre><code>也叫做 解析解，
 闭式解就是一些严格的公式,给出任意的自变量就可以求出其因变量,也就是问题的解
 南瓜书中说闭式解是指可以通过具体的表达式解出待解参数
-</code></pre><h1 id="模型介绍"><a href="#模型介绍" class="headerlink" title="模型介绍"></a>模型介绍</h1><h2 id="表示形式"><a href="#表示形式" class="headerlink" title="表示形式"></a>表示形式</h2><p>对于拥有d个属性的示例 x，表示为：<script type="math/tex">x = ( x _ { 1 } ; x _ { 2 } ; \ldots ; x _ { d } )</script><br>其中$x_i$表示第i个属性的<strong>属性值</strong><br>而我们将<strong>各属性的线性组合</strong>作为线性模型，表示为：</p>
-<script type="math/tex; mode=display">
-f ( x ) = w _ { 1 } x _ { 1 } + w _ { 2 } x _ { 2 } + \ldots + w _ { d } x _ { d } + b</script><center>也可写成向量形式</center>
+</code></pre>
+<h1>模型介绍</h1>
+<h2 id="表示形式">表示形式</h2>
+<p>对于拥有d个属性的示例 x，表示为：$$x = ( x _ { 1 } ; x _ { 2 } ; \ldots ; x _ { d } )$$<br>
+其中$x_i$表示第i个属性的<strong>属性值</strong><br>
+而我们将<strong>各属性的线性组合</strong>作为线性模型，表示为：<br>
+$$<br>
+f ( x ) = w _ { 1 } x _ { 1 } + w _ { 2 } x _ { 2 } + \ldots + w _ { d } x _ { d } + b<br>
+$$</p>
+<center>也可写成向量形式</center>
 $$
 f ( x ) = w ^ { T } x + b
 $$
-
-其中$w$和$x$均为列向量，其中$w$​可以理解成为不同属性的**偏好**而赋予的**权重**
-故线性模型具有很强的**可解释性**
-
-## 模型优点
-
-1. 简单（模型表示、数学公式简单）
-2. 基本（通过引入**层级结构**或**高维映射**可以得到许多**非线性模型**）
-3. 可理解性好（通过**权重**可以看出对属性的**偏好**）
-
-# 属性数值化
-
-**总结**：==离散属性的处理：若有“序”(order)，则连续化；否则，转化为 𝑘维向量==
-
-对于线性模型的求解，我们首先需要明确**参数**的<u>输入</u>和<u>求解</u>两个部分
-
-我们知道**模型的输入**为各个示例 $x_i$，其中的$x_i$由d个属性组成，
-而我们用**d个属性值**表示一个**具体**的示例$x_i$作为输入
-
-这时我们会发现我们需要注意属性值的**数据类型**
-于是这里我们把属性分为两类
-
-1. 连续属性 
-
-2. 离散属性
-    * **有序**的离散属性
-    * **无序**的离散属性
-
-对于**有序**的属性，我们用**相对值**表示属性值，如大、中、小分别用1，0.5，0来表示
-
-对于**无序**的属性，我们用**0/1**表示属性值，我们记改属性有m种属性值，则一个属性值需要**m维列向量**进行表示。
-
-比如对于属性瓜的类别，有西瓜，南瓜，冬瓜 三种属性值，则表示为
-
-$$ x _ { 1 } = ( 1 ; 0 ; 0 ) , x _ { 2 } = (  0 ; 1 ; 0 ) , x _ { 3 } = (  0 ; 0 ; 1 ) $$
-
-这里表示示例$x_1,x_2,x_3$**分别**为西瓜，南瓜，冬瓜
-
----
-
-对于==回归==，==二分类==，==多分类==任务，我们给出不同的线性模型
-
-![](1.png)
-
-# 回归任务
-
-## 最小二乘法
-
->在**第二章**中我们知道均方误差是**回归**任务的常见**性能度量**
->均方误差本身也具有很好的**几何意义**，对于**欧氏距离**
-
-**定义**：基于**均方误差最小化**进行模型求解，使得样本到直线的欧式距离之和最小
-
-**数学知识**：涉及求偏导数
-
-##  1.一元线性回归
-
+<p>其中$w$和$x$均为列向量，其中$w$​可以理解成为不同属性的<strong>偏好</strong>而赋予的<strong>权重</strong><br>
+故线性模型具有很强的<strong>可解释性</strong></p>
+<h2 id="模型优点">模型优点</h2>
+<ol>
+<li class="lvl-3">
+<p>简单（模型表示、数学公式简单）</p>
+</li>
+<li class="lvl-3">
+<p>基本（通过引入<strong>层级结构</strong>或<strong>高维映射</strong>可以得到许多<strong>非线性模型</strong>）</p>
+</li>
+<li class="lvl-3">
+<p>可理解性好（通过<strong>权重</strong>可以看出对属性的<strong>偏好</strong>）</p>
+</li>
+</ol>
+<h1>属性数值化</h1>
+<p><strong>总结</strong>：<mark>离散属性的处理：若有“序”(order)，则连续化；否则，转化为 𝑘维向量</mark></p>
+<p>对于线性模型的求解，我们首先需要明确<strong>参数</strong>的<u>输入</u>和<u>求解</u>两个部分</p>
+<p>我们知道<strong>模型的输入</strong>为各个示例 $x_i$，其中的$x_i$由d个属性组成，而我们用<strong>d个属性值</strong>表示一个<strong>具体</strong>的示例$x_i$作为输入</p>
+<p>这时我们会发现我们需要注意属性值的<strong>数据类型</strong><br>
+于是这里我们把属性分为两类</p>
+<ol>
+<li class="lvl-3">
+<p>连续属性</p>
+</li>
+<li class="lvl-3">
+<p>离散属性</p>
+<ul class="lvl-2">
+<li class="lvl-6"><strong>有序</strong>的离散属性</li>
+<li class="lvl-6"><strong>无序</strong>的离散属性</li>
+</ul>
+</li>
+</ol>
+<p>对于<strong>有序</strong>的属性，我们用<strong>相对值</strong>表示属性值，如大、中、小分别用1，0.5，0来表示</p>
+<p>对于<strong>无序</strong>的属性，我们用<strong>0/1</strong>表示属性值，我们记改属性有m种属性值，则一个属性值需要<strong>m维列向量</strong>进行表示。</p>
+<p>比如对于属性瓜的类别，有西瓜，南瓜，冬瓜 三种属性值，则表示为</p>
+<p>$$ x _ { 1 } = ( 1 ; 0 ; 0 ) , x _ { 2 } = (  0 ; 1 ; 0 ) , x _ { 3 } = (  0 ; 0 ; 1 ) $$</p>
+<p>这里表示示例$x_1,x_2,x_3$<strong>分别</strong>为西瓜，南瓜，冬瓜</p>
+<hr>
+<p>对于<mark>回归</mark>，<mark>二分类</mark>，<mark>多分类</mark>任务，我们给出不同的线性模型</p>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="1.png" alt=""></p>
+<h1>回归任务</h1>
+<h2 id="最小二乘法">最小二乘法</h2>
+<blockquote>
+<p>在<strong>第二章</strong>中我们知道均方误差是<strong>回归</strong>任务的常见<strong>性能度量</strong><br>
+均方误差本身也具有很好的<strong>几何意义</strong>，对于<strong>欧氏距离</strong></p>
+</blockquote>
+<p><strong>定义</strong>：基于<strong>均方误差最小化</strong>进行模型求解，使得样本到直线的欧式距离之和最小</p>
+<p><strong>数学知识</strong>：涉及求偏导数</p>
+<h2 id="1-一元线性回归">1.一元线性回归</h2>
 <center>1.假设方程</center>
 $$
 f\left(x_{i}\right)=w x_{i}+b, 使得 f\left(x_{i}\right) \simeq y_{i}.
 $$
-
-
 <center>2.均方误差最小化时的w和b的值</center>
 $$
 \begin{aligned}\left(w^{*}, b^{*}\right) & =\underset{(w, b)}{\arg \min } \sum_{i=1}^{m}\left(f\left(x_{i}\right)-y_{i}\right)^{2} \\ & =\underset{(w, b)}{\arg \min } \sum_{i=1}^{m}\left(y_{i}-w x_{i}-b\right)^{2} .\end{aligned}
 $$
-
 <center>3.均方误差对𝑤与𝑏求偏导</center>
 $$
 \begin{array}{l}\frac{\partial E_{(w, b)}}{\partial w}=2\left(w \sum_{i=1}^{m} x_{i}^{2}-\sum_{i=1}^{m}\left(y_{i}-b\right) x_{i}\right), \\ \frac{\partial E_{(w, b)}}{\partial b}=2\left(m b-\sum_{i=1}^{m}\left(y_{i}-w x_{i}\right)\right),\end{array}
 $$
 此处$E_{(w, b)}$是是关于w和b的凸函数
 **注意**：此处凸函数定义与 数学分析 中相同，与 高等数学 中相反
-
 <center>4.令偏导为0，得到闭式解，解得w和b</center>
 $$
 \begin{array}{c}w=\frac{\sum_{i=1}^{m} y_{i}\left(x_{i}-\bar{x}\right)}{\sum_{i=1}^{m} x_{i}^{2}-\frac{1}{m}\left(\sum_{i=1}^{m} x_{i}\right)^{2}}, \\ b=\frac{1}{m} \sum_{i=1}^{m}\left(y_{i}-w x_{i}\right)\end{array}
 $$
-
-## 2.多元线性回归
-
-**额外数学知识**:
-
-==矩阵求导==
-
->基于本人数学系所教授的高等代数中无此内容，故认为需要额外补充学习
-
-详见西瓜书附录P400 `A.2 导数`
-
-
+<h2 id="2-多元线性回归">2.多元线性回归</h2>
+<p><strong>额外数学知识</strong>:</p>
+<p><mark>矩阵求导</mark></p>
+<blockquote>
+<p>基于本人数学系所教授的高等代数中无此内容，故认为需要额外补充学习</p>
+</blockquote>
+<p>详见西瓜书附录P400 <code>A.2 导数</code></p>
 <center>1.假设方程</center>
 $$
 f\left(\boldsymbol{x}_{i}\right)=\boldsymbol{w}^{\mathrm{T}} \boldsymbol{x}_{i}+b, 使得 f\left(\boldsymbol{x}_{i}\right) \simeq y_{i},
 $$
 <center>2.为便于讨论，把w和b吸收入向量形式 ，数据集表示为</center>
-
-<script type="math/tex; mode=display">
-\mathbf{X}=\left(\begin{array}{ccccc}x_{11} & x_{12} & \ldots & x_{1 d} & 1 \\ x_{21} & x_{22} & \ldots & x_{2 d} & 1 \\ \vdots & \vdots & \ddots & \vdots & \vdots \\ x_{m 1} & x_{m 2} & \ldots & x_{m d} & 1\end{array}\right)=\left(\begin{array}{cc}\boldsymbol{x}_{1}^{\mathrm{T}} & 1 \\ \boldsymbol{x}_{2}^{\mathrm{T}} & 1 \\ \vdots & \vdots \\ \boldsymbol{x}_{m}^{\mathrm{T}} & 1\end{array}\right)</script><p><strong>示例中的属性值为列向量</strong>，同时将<strong>标记</strong>写成<strong>向量形式</strong>  $y=(y<em>{1};y</em>{2};\ldots;y_{m})$</p>
-<p><strong>注意</strong>：此处将 $f\left(\boldsymbol{x}<em>{i}\right)=\boldsymbol{w}^{\mathrm{T}} \boldsymbol{x}</em>{i}+b$ 中的 $b$ 拆成<code>b*1</code>的形式，用$x$吸收$1$，用$w$吸收$b$变成$\hat{\boldsymbol{w}}$</p>
+<p>$$<br>
+\mathbf{X}=\left(\begin{array}{ccccc}x_{11} &amp; x_{12} &amp; \ldots &amp; x_{1 d} &amp; 1 \ x_{21} &amp; x_{22} &amp; \ldots &amp; x_{2 d} &amp; 1 \ \vdots &amp; \vdots &amp; \ddots &amp; \vdots &amp; \vdots \ x_{m 1} &amp; x_{m 2} &amp; \ldots &amp; x_{m d} &amp; 1\end{array}\right)=\left(\begin{array}{cc}\boldsymbol{x}<em>{1}^{\mathrm{T}} &amp; 1 \ \boldsymbol{x}</em>{2}^{\mathrm{T}} &amp; 1 \ \vdots &amp; \vdots \ \boldsymbol{x}<em>{m}^{\mathrm{T}} &amp; 1\end{array}\right)<br>
+$$<br>
+<strong>示例中的属性值为列向量</strong>，同时将<strong>标记</strong>写成<strong>向量形式</strong>  $ y=(y</em>{1};y_{2};\ldots;y_{m}) $</p>
+<p><strong>注意</strong>：此处将 $ f\left(\boldsymbol{x}<em>{i}\right)=\boldsymbol{w}^{\mathrm{T}} \boldsymbol{x}</em>{i}+b $ 中的 $b$ 拆成<code>b*1</code>的形式，用 $ x $ 吸收$1$，用 $ w $ 吸收 $ b $ 变成 $ \hat{\boldsymbol{w}} $</p>
 <p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="2.png" alt=""><code>[图片源于周志华老师]</code></p>
 <center>3.解得w</center>
 $$
 \hat{\boldsymbol{w}}^{*}=\left(\mathbf{X}^{\mathrm{T}} \mathbf{X}\right)^{-1} \mathbf{X}^{\mathrm{T}} \boldsymbol{y}
 $$
-
 <center>4.最终解得模型为：</center>
 $$
 f\left(\hat{\boldsymbol{x}}_{i}\right)=\hat{\boldsymbol{x}}_{i}^{\mathrm{T}}\left(\mathbf{X}^{\mathrm{T}} \mathbf{X}\right)^{-1} \mathbf{X}^{\mathrm{T}} \boldsymbol{y}.
 $$
-
-$1.若 X ^ { T } X 满 秩 或 正 定 , 则 w ^ { * } = ( X ^ { T } X ) ^ { - 1 } X ^ { T } y$
-$2.若X ^ { T } X 不 满 秩 , 则 可 解 出 多 个 \widehat { w }$
-此时需求助于**归纳偏好**，常见做法是引入 **正则化项**（详见6.4节，11.4节）
-
->通过在损失函数中添加惩罚项来限制模型的复杂度，常见的正则化方法包括
->岭回归（Ridge Regression）、Lasso回归和弹性网（Elastic Net）
-
-PS：$\widehat { w } ^ { * }$转换成**二次型**矩阵相乘还挺有意思的，推导详见南瓜书P35，P36
-
-## 3.广义线性模型(GLM)
-
->令预测值逼近 y 的衍生物
-
-### 对数线性模型
-
->假设我们认为示例所对应的输出标记是在**指数尺度**上变化，
->那就可将**输出标记的对数**作为线性模型逼近的目标
-
-**个人理解**：
-
-其实就是我们在原样本中，通过数值或者散点图，观察到**输出标记**在**指数尺度**上变化，故**很难直接**用一条直线拟合输出标记，因为标记值本身为**非线性增长**。
-
-而对在指数尺度上变化的输出标记**取对数**后，
-就可以将输出标记**映射**到**线性尺度**上变化，故易于用直线拟合
-
-$$ y = w ^ { T } x + b $$
-
+<p>$1.若 X ^ { T } X 满 秩 或 正 定 , 则 w ^ { * } = ( X ^ { T } X ) ^ { - 1 } X ^ { T } y$<br>
+$2.若X ^ { T } X 不 满 秩 , 则 可 解 出 多 个 \widehat { w }$</p>
+<p>此时需求助于<strong>归纳偏好</strong>，常见做法是引入 <strong>正则化项</strong>（详见6.4节，11.4节）</p>
+<blockquote>
+<p>通过在损失函数中添加惩罚项来限制模型的复杂度，常见的正则化方法包括岭回归（Ridge Regression）、Lasso回归和弹性网（Elastic Net）</p>
+</blockquote>
+<p>PS：$\widehat { w } ^ { * }$转换成<strong>二次型</strong>矩阵相乘还挺有意思的，推导详见南瓜书P35，P36</p>
+<h2 id="3-广义线性模型-GLM">3.广义线性模型(GLM)</h2>
+<blockquote>
+<p>令预测值逼近 y 的衍生物</p>
+</blockquote>
+<h3 id="对数线性模型">对数线性模型</h3>
+<blockquote>
+<p>假设我们认为示例所对应的输出标记是在<strong>指数尺度</strong>上变化，那就可将<strong>输出标记的对数</strong>作为线性模型逼近的目标</p>
+</blockquote>
+<p><strong>个人理解</strong>：</p>
+<p>其实就是我们在原样本中，通过数值或者散点图，观察到<strong>输出标记</strong>在<strong>指数尺度</strong>上变化，故<strong>很难直接</strong>用一条直线拟合输出标记，因为标记值本身为<strong>非线性增长</strong>。</p>
+<p>而对在指数尺度上变化的输出标记<strong>取对数</strong>后，就可以将输出标记<strong>映射</strong>到<strong>线性尺度</strong>上变化，故易于用直线拟合</p>
+<p>$$ y = w ^ { T } x + b $$</p>
 <center>将输出标记 y 取对数转变为形式上的线性回归方程</center>
-
-<script type="math/tex; mode=display">\ln y = w ^ { T } x + b</script><blockquote>
+<p>$$ \ln y = w ^ { T } x + b $$</p>
+<blockquote>
 <p>实际上是在试图让$e ^ { w ^T x} + b$逼近y</p>
 <p>这里的<strong>对数函数</strong>起到了将线性回归模型的<strong>预测值</strong>与<strong>真实标记</strong>联系起来的作用</p>
 <p>但实质上已是在求取输入空间到输出空间的<strong>非线性函数映射</strong></p>
 </blockquote>
 <hr>
 <p>我们知道，<strong>对数线性模型</strong>是使用<strong>对数函数</strong>将输出标记进行<strong>映射</strong></p>
-<p>那么如果我们选取不同的<strong>函数</strong>对输出标记进行<strong>映射</strong>，<br>就能将一个<strong>非线性变化</strong>的样本用<strong>线性模型</strong>进行拟合了。</p>
+<p>那么如果我们选取不同的<strong>函数</strong>对输出标记进行<strong>映射</strong>，就能将一个<strong>非线性变化</strong>的样本用<strong>线性模型</strong>进行拟合了。</p>
 <p>而此时问题就转变为<strong>映射函数的寻找</strong>了，需要找到一个合适的映射函数，将原来的标记值<strong>数据形态</strong>映射成线性的🤔</p>
 <p>这里就涉及到模型的<strong>优化</strong>了，找到映射函数得到<strong>新的</strong>线性模型，并在<strong>某一性能度量</strong>下进行比较，结合<strong>需求</strong>选择模型。</p>
 <hr>
 <p>而由此我们引出了<strong>广义线性模型</strong>（Generalized Linear Model）的定义：</p>
-<script type="math/tex; mode=display">y = g ^ { - 1 } ( w ^ { T } x + b )</script><p>其中$g ( \cdot )$为<strong>连续</strong>且<strong>充分光滑</strong>的<strong>单调可微</strong>函数，称为<strong>联系函数</strong>(link function)</p>
+<p>$$ y = g ^ { - 1 } ( w ^ { T } x + b )$$<br>
+其中$g ( \cdot )$为<strong>连续</strong>且<strong>充分光滑</strong>的<strong>单调可微</strong>函数，称为<strong>联系函数</strong>(link function)</p>
 <blockquote>
 <p>广义线性模型的<strong>参数估计</strong>常通过加权最小二乘法或极大似然法进行</p>
 </blockquote>
-<p>显然，<strong>对数线性回归</strong>是<strong>广义线性模型</strong>在 $g ( \cdot )$=$ln ( \cdot )$时的特例<br>显然，<strong>一元线性回归</strong>也是如此</p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://hp-patience.github.io">HP-Patience</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://hp-patience.github.io/2024/05/16/%F0%9F%8D%89Book-3%E7%AB%A0-%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/">https://hp-patience.github.io/2024/05/16/%F0%9F%8D%89Book-3%E7%AB%A0-%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://hp-patience.github.io" target="_blank">HP-Patience_blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://source.fomal.cc/img/default_cover_12.webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/05/16/%F0%9F%8D%89Book-4%E7%AB%A0-%E5%86%B3%E7%AD%96%E6%A0%91/" title="🍉Book-4章-决策树"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_5.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">🍉Book-4章-决策树</div></div></a></div><div class="next-post pull-right"><a href="/2024/05/16/%F0%9F%8D%89Book-2%E7%AB%A0-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9/" title="🍉Book-2章-模型评估与选择"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_6.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">🍉Book-2章-模型评估与选择</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/HP-Patience/HP-Patience.github.io/main/avatar_img/cat.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">HP-Patience</div><div class="author-info__description">根据费曼学习法，对近期所学内容进行反馈输出</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/HP-Patience"><i class="fab fa-github"></i><span>🛴前往小家...</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/HP-Patience" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:secret@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%89%80%E9%9C%80%E6%95%B0%E5%AD%A6%E7%9F%A5%E8%AF%86"><span class="toc-text">所需数学知识</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%90%8D%E8%AF%8D%E8%A7%A3%E9%87%8A"><span class="toc-text">名词解释</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B%E4%BB%8B%E7%BB%8D"><span class="toc-text">模型介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E7%A4%BA%E5%BD%A2%E5%BC%8F"><span class="toc-text">表示形式</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/05/17/%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97/" title="时间序列"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_7.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="时间序列"/></a><div class="content"><a class="title" href="/2024/05/17/%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97/" title="时间序列">时间序列</a><time datetime="2024-05-16T23:36:37.000Z" title="发表于 2024-05-17 07:36:37">2024-05-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/16/%F0%9F%8D%89Book-10%E7%AB%A0-%E9%99%8D%E7%BB%B4%E4%B8%8E%E5%BA%A6%E9%87%8F%E5%AD%A6%E4%B9%A0/" title="🍉Book-10章-降维与度量学习"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_7.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="🍉Book-10章-降维与度量学习"/></a><div class="content"><a class="title" href="/2024/05/16/%F0%9F%8D%89Book-10%E7%AB%A0-%E9%99%8D%E7%BB%B4%E4%B8%8E%E5%BA%A6%E9%87%8F%E5%AD%A6%E4%B9%A0/" title="🍉Book-10章-降维与度量学习">🍉Book-10章-降维与度量学习</a><time datetime="2024-05-16T15:18:45.000Z" title="发表于 2024-05-16 23:18:45">2024-05-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/16/%F0%9F%8D%89Book-9%E7%AB%A0-%E8%81%9A%E7%B1%BB/" title="🍉Book-9章-聚类"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_12.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="🍉Book-9章-聚类"/></a><div class="content"><a class="title" href="/2024/05/16/%F0%9F%8D%89Book-9%E7%AB%A0-%E8%81%9A%E7%B1%BB/" title="🍉Book-9章-聚类">🍉Book-9章-聚类</a><time datetime="2024-05-16T15:18:25.000Z" title="发表于 2024-05-16 23:18:25">2024-05-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/16/%F0%9F%8D%89Book-8%E7%AB%A0-%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/" title="🍉Book-8章-集成学习"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_6.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="🍉Book-8章-集成学习"/></a><div class="content"><a class="title" href="/2024/05/16/%F0%9F%8D%89Book-8%E7%AB%A0-%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/" title="🍉Book-8章-集成学习">🍉Book-8章-集成学习</a><time datetime="2024-05-16T15:18:15.000Z" title="发表于 2024-05-16 23:18:15">2024-05-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/16/%F0%9F%8D%89Book-7%E7%AB%A0-%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E5%99%A8/" title="🍉Book-7章-贝叶斯分类器"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_9.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="🍉Book-7章-贝叶斯分类器"/></a><div class="content"><a class="title" href="/2024/05/16/%F0%9F%8D%89Book-7%E7%AB%A0-%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E5%99%A8/" title="🍉Book-7章-贝叶斯分类器">🍉Book-7章-贝叶斯分类器</a><time datetime="2024-05-16T15:18:02.000Z" title="发表于 2024-05-16 23:18:02">2024-05-16</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://source.fomal.cc/img/default_cover_12.webp')"><div id="footer-wrap"><div class="copyright">&copy;2024 By HP-Patience</div><div class="footer_custom_text">I wish you to become your own sun, no need to rely on who's light.<p><a target="_blank" href="https://hexo.io/"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a>&nbsp;<a target="_blank" href="https://butterfly.js.org/"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a>&nbsp;<a target="_blank" href="https://www.jsdelivr.com/"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用JsDelivr为静态资源提供CDN加速"></a> &nbsp;<a target="_blank" href="https://vercel.com/ "><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Hosted-Vervel-brightgreen?style=flat&logo=Vercel" title="本站采用双线部署，默认线路托管于Vercel"></a>&nbsp;<a target="_blank" href="https://vercel.com/ "><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Hosted-Coding-0cedbe?style=flat&logo=Codio" title="本站采用双线部署，联通线路托管于Coding"></a>&nbsp;<a target="_blank" href="https://github.com/"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" title="本站项目由Gtihub托管"></a>&nbsp;<a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></p></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="/js/tw_cn.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@5.2.0/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script>function panguFn () {
+<p>显然，<strong>对数线性回归</strong>是<strong>广义线性模型</strong>在 $g ( \cdot )$=$ln ( \cdot )$时的特例显然，<strong>一元线性回归</strong>也是如此</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://hp-patience.github.io">HP-Patience</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://hp-patience.github.io/2024/05/16/%F0%9F%8D%89Book-3%E7%AB%A0-%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/">https://hp-patience.github.io/2024/05/16/%F0%9F%8D%89Book-3%E7%AB%A0-%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://hp-patience.github.io" target="_blank">HP-Patience_blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://source.fomal.cc/img/default_cover_10.webp" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/05/16/%F0%9F%8D%89Book-4%E7%AB%A0-%E5%86%B3%E7%AD%96%E6%A0%91/" title="🍉Book-4章-决策树"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_2.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">🍉Book-4章-决策树</div></div></a></div><div class="next-post pull-right"><a href="/2024/05/16/%F0%9F%8D%89Book-2%E7%AB%A0-%E6%A8%A1%E5%9E%8B%E8%AF%84%E4%BC%B0%E4%B8%8E%E9%80%89%E6%8B%A9/" title="🍉Book-2章-模型评估与选择"><img class="cover" src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_12.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">🍉Book-2章-模型评估与选择</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://raw.githubusercontent.com/HP-Patience/HP-Patience.github.io/main/avatar_img/cat.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">HP-Patience</div><div class="author-info__description">根据费曼学习法，对近期所学内容进行反馈输出</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">15</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/HP-Patience"><i class="fab fa-github"></i><span>🛴前往小家...</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/HP-Patience" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:secret@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">所需数学知识</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">名词解释</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">模型介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A1%A8%E7%A4%BA%E5%BD%A2%E5%BC%8F"><span class="toc-text">表示形式</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%A1%E5%9E%8B%E4%BC%98%E7%82%B9"><span class="toc-text">模型优点</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">属性数值化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-text">回归任务</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95"><span class="toc-text">最小二乘法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%B8%80%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92"><span class="toc-text">1.一元线性回归</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%A4%9A%E5%85%83%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92"><span class="toc-text">2.多元线性回归</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%B9%BF%E4%B9%89%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B-GLM"><span class="toc-text">3.广义线性模型(GLM)</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E6%95%B0%E7%BA%BF%E6%80%A7%E6%A8%A1%E5%9E%8B"><span class="toc-text">对数线性模型</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/05/17/%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97/" title="时间序列"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_4.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="时间序列"/></a><div class="content"><a class="title" href="/2024/05/17/%E6%97%B6%E9%97%B4%E5%BA%8F%E5%88%97/" title="时间序列">时间序列</a><time datetime="2024-05-16T23:36:37.000Z" title="发表于 2024-05-17 07:36:37">2024-05-17</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/16/%F0%9F%8D%89Book-10%E7%AB%A0-%E9%99%8D%E7%BB%B4%E4%B8%8E%E5%BA%A6%E9%87%8F%E5%AD%A6%E4%B9%A0/" title="🍉Book-10章-降维与度量学习"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_7.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="🍉Book-10章-降维与度量学习"/></a><div class="content"><a class="title" href="/2024/05/16/%F0%9F%8D%89Book-10%E7%AB%A0-%E9%99%8D%E7%BB%B4%E4%B8%8E%E5%BA%A6%E9%87%8F%E5%AD%A6%E4%B9%A0/" title="🍉Book-10章-降维与度量学习">🍉Book-10章-降维与度量学习</a><time datetime="2024-05-16T15:18:45.000Z" title="发表于 2024-05-16 23:18:45">2024-05-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/16/%F0%9F%8D%89Book-9%E7%AB%A0-%E8%81%9A%E7%B1%BB/" title="🍉Book-9章-聚类"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_7.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="🍉Book-9章-聚类"/></a><div class="content"><a class="title" href="/2024/05/16/%F0%9F%8D%89Book-9%E7%AB%A0-%E8%81%9A%E7%B1%BB/" title="🍉Book-9章-聚类">🍉Book-9章-聚类</a><time datetime="2024-05-16T15:18:25.000Z" title="发表于 2024-05-16 23:18:25">2024-05-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/16/%F0%9F%8D%89Book-8%E7%AB%A0-%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/" title="🍉Book-8章-集成学习"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_3.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="🍉Book-8章-集成学习"/></a><div class="content"><a class="title" href="/2024/05/16/%F0%9F%8D%89Book-8%E7%AB%A0-%E9%9B%86%E6%88%90%E5%AD%A6%E4%B9%A0/" title="🍉Book-8章-集成学习">🍉Book-8章-集成学习</a><time datetime="2024-05-16T15:18:15.000Z" title="发表于 2024-05-16 23:18:15">2024-05-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/16/%F0%9F%8D%89Book-7%E7%AB%A0-%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E5%99%A8/" title="🍉Book-7章-贝叶斯分类器"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://source.fomal.cc/img/default_cover_9.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="🍉Book-7章-贝叶斯分类器"/></a><div class="content"><a class="title" href="/2024/05/16/%F0%9F%8D%89Book-7%E7%AB%A0-%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%88%86%E7%B1%BB%E5%99%A8/" title="🍉Book-7章-贝叶斯分类器">🍉Book-7章-贝叶斯分类器</a><time datetime="2024-05-16T15:18:02.000Z" title="发表于 2024-05-16 23:18:02">2024-05-16</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://source.fomal.cc/img/default_cover_10.webp')"><div id="footer-wrap"><div class="copyright">&copy;2024 By HP-Patience</div><div class="footer_custom_text">I wish you to become your own sun, no need to rely on who's light.<p><a target="_blank" href="https://hexo.io/"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a>&nbsp;<a target="_blank" href="https://butterfly.js.org/"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a>&nbsp;<a target="_blank" href="https://www.jsdelivr.com/"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用JsDelivr为静态资源提供CDN加速"></a> &nbsp;<a target="_blank" href="https://vercel.com/ "><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Hosted-Vervel-brightgreen?style=flat&logo=Vercel" title="本站采用双线部署，默认线路托管于Vercel"></a>&nbsp;<a target="_blank" href="https://vercel.com/ "><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Hosted-Coding-0cedbe?style=flat&logo=Codio" title="本站采用双线部署，联通线路托管于Coding"></a>&nbsp;<a target="_blank" href="https://github.com/"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" title="本站项目由Gtihub托管"></a>&nbsp;<a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></p></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="translateLink" type="button" title="简繁转换">繁</button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="/js/tw_cn.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/instant.page@5.2.0/instantpage.min.js" type="module"></script><script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.8/dist/lazyload.iife.min.js"></script><script src="https://cdn.jsdelivr.net/npm/node-snackbar@0.1.16/dist/snackbar.min.js"></script><script>function panguFn () {
   if (typeof pangu === 'object') pangu.autoSpacingPage()
   else {
     getScript('https://cdn.jsdelivr.net/npm/pangu@4.0.7/dist/browser/pangu.min.js')
@@ -424,6 +410,16 @@ document.body.addEventListener('input', POWERMODE);
     parent.insertAdjacentHTML("afterbegin",child)}
      </script><style>#catalog_magnet{flex-wrap: wrap;display: flex;width:100%;justify-content:space-between;padding: 10px 10px 0 10px;align-content: flex-start;}.magnet_item{flex-basis: calc(50% - 5px);background: #f2f2f2;margin-bottom: 10px;border-radius: 8px;transition: all 0.2s ease-in-out;}.magnet_item:hover{background: #69e8f2}.magnet_link_more{color:#555}.magnet_link{color:black}.magnet_link:hover{color:white}@media screen and (max-width: 600px) {.magnet_item {flex-basis: 100%;}}.magnet_link_context{display:flex;padding: 10px;font-size:16px;transition: all 0.2s ease-in-out;}.magnet_link_context:hover{padding: 10px 20px;}</style>
     <style></style><script data-pjax>
+    function butterfly_categories_card_injector_config(){
+      var parent_div_git = document.getElementById('recent-posts');
+      var item_html = '<style>li.categoryBar-list-item{width:32.3%;}.categoryBar-list{max-height: 190px;overflow:auto;}.categoryBar-list::-webkit-scrollbar{width:0!important}@media screen and (max-width: 650px){.categoryBar-list{max-height: 160px;}}</style><div class="recent-post-item" style="height:auto;width:100%;padding:0px;"><div id="categoryBar"><ul class="categoryBar-list"><li class="categoryBar-list-item" style="background:url(https://source.fomal.cc/img/default_cover_2.webp);"> <a class="categoryBar-list-link" href="categories/Blog搭建/">Blog搭建</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr">Blog搭建</span></li><li class="categoryBar-list-item" style="background:url(https://source.fomal.cc/img/dm6.webp);"> <a class="categoryBar-list-link" href="categories/数学建模/">数学建模</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">🍉Book</span></li><li class="categoryBar-list-item" style="background:url(https://source.fomal.cc/img/dm12.webp);"> <a class="categoryBar-list-link" href="categories/Java/">Java</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">Java</span></li><li class="categoryBar-list-item" style="background:url(https://source.fomal.cc/img/dm5.webp);"> <a class="categoryBar-list-link" href="categories/🍉Book/">🍉Book</a><span class="categoryBar-list-count">10</span><span class="categoryBar-list-descr">数学建模</span></li></ul></div></div>';
+      console.log('已挂载butterfly_categories_card')
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+      }
+    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
+    butterfly_categories_card_injector_config()
+    }
+  </script><script data-pjax>
   function butterfly_footer_beautify_injector_config(){
     var parent_div_git = document.getElementById('footer-wrap');
     var item_html = '<div id="workboard"></div>';
@@ -447,14 +443,4 @@ document.body.addEventListener('input', POWERMODE);
   else if (epage === cpage){
     butterfly_footer_beautify_injector_config();
   }
-  </script><script async src="/js/footer_runtime_Fomalhaut"></script><script data-pjax>
-    function butterfly_categories_card_injector_config(){
-      var parent_div_git = document.getElementById('recent-posts');
-      var item_html = '<style>li.categoryBar-list-item{width:32.3%;}.categoryBar-list{max-height: 190px;overflow:auto;}.categoryBar-list::-webkit-scrollbar{width:0!important}@media screen and (max-width: 650px){.categoryBar-list{max-height: 160px;}}</style><div class="recent-post-item" style="height:auto;width:100%;padding:0px;"><div id="categoryBar"><ul class="categoryBar-list"><li class="categoryBar-list-item" style="background:url(https://source.fomal.cc/img/default_cover_2.webp);"> <a class="categoryBar-list-link" href="categories/🍉Book/">🍉Book</a><span class="categoryBar-list-count">10</span><span class="categoryBar-list-descr">Blog搭建</span></li><li class="categoryBar-list-item" style="background:url(https://source.fomal.cc/img/dm6.webp);"> <a class="categoryBar-list-link" href="categories/Blog搭建/">Blog搭建</a><span class="categoryBar-list-count">2</span><span class="categoryBar-list-descr">🍉Book</span></li><li class="categoryBar-list-item" style="background:url(https://source.fomal.cc/img/dm12.webp);"> <a class="categoryBar-list-link" href="categories/数学建模/">数学建模</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">Java</span></li><li class="categoryBar-list-item" style="background:url(https://source.fomal.cc/img/dm5.webp);"> <a class="categoryBar-list-link" href="categories/Java/">Java</a><span class="categoryBar-list-count">1</span><span class="categoryBar-list-descr">数学建模</span></li></ul></div></div>';
-      console.log('已挂载butterfly_categories_card')
-      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
-      }
-    if( document.getElementById('recent-posts') && (location.pathname ==='/'|| '/' ==='all')){
-    butterfly_categories_card_injector_config()
-    }
-  </script><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body></html>
+  </script><script async src="/js/footer_runtime_Fomalhaut"></script><!-- hexo injector body_end end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":false},"log":false});</script></body></html>
