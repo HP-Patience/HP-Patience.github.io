@@ -1,19 +1,36 @@
 <hr>
-<p>title: 🍉Book-5章-神经网络<br>date: 2024-05-16 23:17:37<br>tags:<br>categories: </p>
-<ul>
-<li>🍉Book<br>description: 西瓜书-第五章-学习笔记 #文章描述<br>swiper_index: 62 #置顶轮播图顺序，非负整数，数字越大越靠前</li>
+<p>title: 🍉Book-5章-神经网络<br>
+date: 2024-05-16 23:17:37<br>
+tags:<br>
+categories:</p>
+<ul class="lvl-0">
+<li class="lvl-2">🍉Book<br>
+description: 西瓜书-第五章-学习笔记 #文章描述<br>
+swiper_index: 62 #置顶轮播图顺序，非负整数，数字越大越靠前</li>
 </ul>
 <hr>
-<h1 id="神经网络模型"><a href="#神经网络模型" class="headerlink" title="神经网络模型"></a>神经网络模型</h1><p>1943年一直沿用至今的M-P神经网络模型</p>
-<h2 id="M-P神经网络模型"><a href="#M-P神经网络模型" class="headerlink" title="M-P神经网络模型"></a>M-P神经网络模型</h2><h3 id="模型解释："><a href="#模型解释：" class="headerlink" title="模型解释："></a><strong>模型解释</strong>：</h3><p>将输入神经元的x乘上相应==权重w==并求和，将结果与==阈值==$\theta$做差，再经过==激活函数f==得到输出值y</p>
-<h3 id="名词解释："><a href="#名词解释：" class="headerlink" title="名词解释："></a><strong>名词解释</strong>：</h3><p><strong>阈值</strong>(threshold / bias):<br>表示神经元电位超过阈值则被激活</p>
-<p><strong>激活函数</strong>(activation function)：<br>也称<u>挤压函数</u>或<u>响应函数</u>，用于将输入值映射为0/1或(0，1)</p>
-<h3 id="训练目标："><a href="#训练目标：" class="headerlink" title="训练目标："></a><strong>训练目标</strong>：</h3><p>通过训练模型，得出合适的w和$\theta$，其中训练算法最常见的就是下面会说到的BP算法</p>
+<h1>神经网络模型</h1>
+<p>1943年一直沿用至今的M-P神经网络模型</p>
+<h2 id="M-P神经网络模型">M-P神经网络模型</h2>
+<h3 id="模型解释："><strong>模型解释</strong>：</h3>
+<p>将输入神经元的x乘上相应<mark>权重w</mark>并求和，将结果与<mark>阈值</mark>$\theta$做差，再经过<mark>激活函数f</mark>得到输出值y</p>
+<h3 id="名词解释："><strong>名词解释</strong>：</h3>
+<p><strong>阈值</strong>(threshold / bias):<br>
+表示神经元电位超过阈值则被激活</p>
+<p><strong>激活函数</strong>(activation function)：也称<u>挤压函数</u>或<u>响应函数</u>，用于将输入值映射为0/1或(0，1)</p>
+<h3 id="训练目标："><strong>训练目标</strong>：</h3>
+<p>通过训练模型，得出合适的w和$\theta$，其中训练算法最常见的就是下面会说到的BP算法</p>
 <p>![[Pasted image 20240531074642.png]]</p>
-<h2 id="激活函数"><a href="#激活函数" class="headerlink" title="激活函数"></a>激活函数</h2><p>回顾第三章线性模型中的<strong>对数几率回归</strong>模型和<strong>单位阶跃函数</strong></p>
-<p>最理想状态是用==单位阶跃函数==输入值映射为0/1，但由于其不连续、不光滑的性质，<br>我们使用==Sigmoid函数==将输入值映射为(0，1)，Sigmoid函数即型为S的函数，其中我们最常用的就是对数几率函数：</p>
-<script type="math/tex; mode=display">s i g m o i d ( x ) = \frac { 1 } { 1 + e ^ { - x } }</script><p><strong>对率函数</strong>有很好的==性质==：<script type="math/tex">f ^ { \prime } ( x ) = f \left( x \right) ( 1 - f \left( x \right) )</script></p>
-<h1 id="万有逼近能力"><a href="#万有逼近能力" class="headerlink" title="万有逼近能力"></a>万有逼近能力</h1><h3 id="名词概念："><a href="#名词概念：" class="headerlink" title="名词概念："></a>名词概念：</h3><p>仅需一个包含足够多神经元的隐层，多层前馈神经网络就能以任意精度逼近任意复杂度的连续函数</p>
-<h3 id="引入原因："><a href="#引入原因：" class="headerlink" title="引入原因："></a>引入原因：</h3><p>很多算法都具有万有逼近能力，不是神经网络所特有的，如决策树、支持向量机等等。<br>而之所以在神经网络中强调其万有逼近能力，是因为其数学公理方面的理论薄弱，为了证明其有效性而进行说明。</p>
-<h1 id="BP算法"><a href="#BP算法" class="headerlink" title="BP算法"></a>BP算法</h1><p><strong>误差逆传播</strong>(error BackPropagation，简称BP)算法，亦称<strong>反向传播算法</strong></p>
-<h1 id="缓解过拟合"><a href="#缓解过拟合" class="headerlink" title="缓解过拟合"></a>缓解过拟合</h1>
+<h2 id="激活函数">激活函数</h2>
+<p>回顾第三章线性模型中的<strong>对数几率回归</strong>模型和<strong>单位阶跃函数</strong></p>
+<p>最理想状态是用<mark>单位阶跃函数</mark>输入值映射为0/1，但由于其不连续、不光滑的性质，我们使用<mark>Sigmoid函数</mark>将输入值映射为(0，1)，Sigmoid函数即型为S的函数，其中我们最常用的就是对数几率函数：<br>
+$$ s i g m o i d ( x ) = \frac { 1 } { 1 + e ^ { - x } }$$<br>
+<strong>对率函数</strong>有很好的<mark>性质</mark>：$$ f ^ { \prime } ( x ) = f \left( x \right) ( 1 - f \left( x \right) )$$</p>
+<h1>万有逼近能力</h1>
+<h3 id="名词概念：">名词概念：</h3>
+<p>仅需一个包含足够多神经元的隐层，多层前馈神经网络就能以任意精度逼近任意复杂度的连续函数</p>
+<h3 id="引入原因：">引入原因：</h3>
+<p>很多算法都具有万有逼近能力，不是神经网络所特有的，如决策树、支持向量机等等。而之所以在神经网络中强调其万有逼近能力，是因为其数学公理方面的理论薄弱，为了证明其有效性而进行说明。</p>
+<h1>BP算法</h1>
+<p><strong>误差逆传播</strong>(error BackPropagation，简称BP)算法，亦称<strong>反向传播算法</strong></p>
+<h1>缓解过拟合</h1>
