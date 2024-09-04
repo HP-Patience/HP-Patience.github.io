@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title>【评测】opencompass-司南</title>
+      <link href="/2024/09/04/%E3%80%90%E8%AF%84%E6%B5%8B%E3%80%91opencompass-%E5%8F%B8%E5%8D%97/"/>
+      <url>/2024/09/04/%E3%80%90%E8%AF%84%E6%B5%8B%E3%80%91opencompass-%E5%8F%B8%E5%8D%97/</url>
+      
+        <content type="html"><![CDATA[<h1>参考文档</h1><p><a href="https://github.com/InternLM/Tutorial/tree/camp3/docs/L1/OpenCompass">Tutorial/docs/L1/OpenCompass at camp3 · InternLM/Tutorial (github.com)</a></p><h1>任务内容</h1><p><img src="0.png" alt=""></p><h1>任务复现过程</h1><p>列出所有跟 InternLM 及 C-Eval 相关的配置：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python tools/list_configs.py internlm ceval</span><br></pre></td></tr></table></figure><p><img src="1.png" alt=""></p><p><img src="2.png" alt=""></p><p><mark>评测结束</mark></p><p><img src="3.png" alt=""></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>【Fine-tuning】XTuner微调个人小助手</title>
       <link href="/2024/09/04/%E3%80%90Fine-tuning%E3%80%91XTuner%E5%BE%AE%E8%B0%83%E4%B8%AA%E4%BA%BA%E5%B0%8F%E5%8A%A9%E6%89%8B/"/>
       <url>/2024/09/04/%E3%80%90Fine-tuning%E3%80%91XTuner%E5%BE%AE%E8%B0%83%E4%B8%AA%E4%BA%BA%E5%B0%8F%E5%8A%A9%E6%89%8B/</url>
