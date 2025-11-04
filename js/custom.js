@@ -5,7 +5,6 @@ import {
   setPersistence,
   browserLocalPersistence,
   signInWithEmailAndPassword,
-  createUserWithEmailAndPassword,
   signOut,
   onAuthStateChanged
 } from "https://www.gstatic.com/firebasejs/12.5.0/firebase-auth.js";
@@ -21,28 +20,33 @@ const firebaseConfig = {
   measurementId: "G-1XEGP9WLX0"
 };
 
+// ✅ 仅允许此邮箱登录
+const ALLOWED_EMAIL = "1249140039@qq.com"; // ⚠️ 改成你自己的邮箱
+
 // 🚀 初始化 Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-// ✅ 持久化登录（可改为 inMemoryPersistence 让刷新即登出）
+// ✅ 持久化登录
 setPersistence(auth, browserLocalPersistence);
 
 // 🚧 页面加载前隐藏内容
 document.documentElement.style.visibility = "hidden";
+console.log("✅ Firebase login script loaded");
 
-// 📦 只插入一次登录层
 document.addEventListener("DOMContentLoaded", () => {
+  console.log("🌐 DOM 已加载");
+
+  // 登录层
   if (!document.getElementById("login-overlay")) {
     const overlayHTML = `
       <div id="login-overlay">
         <div class="login-card">
-          <h2>🔐 登录博客</h2>
+          <h2 style="color:#fff;">🔐 登录博客</h2>
           <input id="email" type="email" placeholder="邮箱">
           <input id="password" type="password" placeholder="密码">
           <div class="btn-group">
             <button id="login-btn">登录</button>
-            <button id="register-btn">注册</button>
           </div>
           <p id="login-msg"></p>
         </div>
@@ -51,7 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.insertAdjacentHTML("beforeend", overlayHTML);
   }
 
-  // 🎨 登录页样式（只添加一次）
+  // 样式
   if (!document.getElementById("login-style")) {
     const style = document.createElement("style");
     style.id = "login-style";
@@ -80,6 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
         margin-bottom: 1rem;
         font-size: 1.3rem;
         font-weight: 600;
+        color: #fff;
       }
       .login-card input {
         width: 100%;
@@ -93,61 +98,57 @@ document.addEventListener("DOMContentLoaded", () => {
         margin-top: 0.8rem;
       }
       .btn-group button {
-        width: 45%;
-        margin: 0.3rem 2%;
+        width: 95%;
         padding: 8px 0;
         border: none;
         border-radius: 8px;
         cursor: pointer;
         transition: 0.3s;
         color: #fff;
+        background: #4CAF50;
       }
-      #login-btn { background: #4CAF50; }
-      #register-btn { background: #2196F3; }
       .btn-group button:hover { opacity: 0.85; }
       #login-msg { margin-top: 0.6rem; font-size: 0.9rem; color: #ffcccc; }
     `;
     document.head.appendChild(style);
   }
 
-  // 🔗 按钮事件绑定（防重复）
+  // 绑定登录按钮
   const loginBtn = document.getElementById("login-btn");
-  const registerBtn = document.getElementById("register-btn");
   if (loginBtn) loginBtn.onclick = loginUser;
-  if (registerBtn) registerBtn.onclick = registerUser;
 });
 
-// 🧾 注册逻辑
-async function registerUser() {
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-  const msg = document.getElementById("login-msg");
-  try {
-    await createUserWithEmailAndPassword(auth, email, password);
-    msg.textContent = "✅ 注册成功，请重新登录";
-  } catch (e) {
-    msg.textContent = e.message;
-  }
-}
-
-// 🔑 登录逻辑
+// 🔑 登录逻辑（含调试输出）
 async function loginUser() {
-  const email = document.getElementById("email").value;
+  const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value;
   const msg = document.getElementById("login-msg");
+
+  console.log("🚀 尝试登录：", email);
+
+  if (email !== ALLOWED_EMAIL) {
+    msg.textContent = "❌ 此邮箱无权访问博客";
+    console.warn("拒绝访问的邮箱：", email);
+    return;
+  }
+
   try {
-    await signInWithEmailAndPassword(auth, email, password);
-    msg.textContent = "✅ 登录成功！";
+    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    console.log("✅ 登录成功：", userCredential.user);
+    msg.textContent = "✅ 登录成功，正在加载博客...";
+    setTimeout(() => location.reload(), 1000);
   } catch (e) {
-    msg.textContent = e.message;
+    console.error("❌ 登录失败：", e.code, e.message);
+    msg.textContent = `❌ 登录失败：${e.code}`;
   }
 }
 
-// 🚪 登出逻辑
+// 🚪 登出逻辑（可手动调用）
 window.logoutUser = async function () {
   try {
     await signOut(auth);
     alert("已登出！");
+    location.reload();
   } catch (e) {
     alert(e.message);
   }
@@ -156,13 +157,15 @@ window.logoutUser = async function () {
 // 👀 登录状态检测
 onAuthStateChanged(auth, (user) => {
   const overlay = document.getElementById("login-overlay");
-  if (user) {
-    // 已登录
+
+  if (user && user.email === ALLOWED_EMAIL) {
+    console.log("✅ 已登录用户：", user.email);
     if (overlay) overlay.style.display = "none";
   } else {
-    // 未登录
+    console.log("🚫 未登录或邮箱不匹配");
     if (overlay) overlay.style.display = "flex";
   }
-  // 🔓 页面内容显示
+
+  // 显示页面内容
   document.documentElement.style.visibility = "visible";
 });
