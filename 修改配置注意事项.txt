@@ -1,0 +1,2 @@
+注意： 以後只需要在 _config.butterfly.yml 進行配置就行。
+如果使用了 _config.butterfly.yml， 配置主題的 _config.yml 將不會有效果。
