@@ -46,7 +46,7 @@ favicon: /img/favicon.png
 
 # Avatar (头像)
 avatar:
-  img: https://raw.githubusercontent.com/HP-Patience/HP-Patience.github.io/main/avatar_img/cat.jpg
+  img: https://raw.githubusercontent.com/HP-Patience/HP-Patience.github.io/main/avatar_img/me.jpg
   effect: false
 
 # Disable all banner image 顶部图
