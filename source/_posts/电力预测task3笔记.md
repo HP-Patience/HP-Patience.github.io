@@ -2,7 +2,7 @@
 title: 电力预测task3笔记
 date: 2024-07-20 23:17:01
 tags:
----
+- 数据挖掘
 
 ```
 Datawhale AI夏令营

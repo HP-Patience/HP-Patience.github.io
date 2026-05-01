@@ -2,6 +2,7 @@
 title: My first blog
 date: 2024-04-23 00:34:12
 tags:
+- 随笔
 ---
 
 

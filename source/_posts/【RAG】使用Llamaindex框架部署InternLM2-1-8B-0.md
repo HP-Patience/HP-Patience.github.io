@@ -2,6 +2,7 @@
 title: 【RAG】使用Llamaindex框架部署InternLM2-1.8B
 date: 2024-09-04 14:04:00
 tags:
+- RAG
 categories: 
 - 书生·浦语三期实战营
 ---

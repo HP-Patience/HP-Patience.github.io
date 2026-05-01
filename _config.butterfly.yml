@@ -91,19 +91,6 @@ cover:
   # When cover is not set, the default cover is displayed (当没有设置cover时，的封面顯示)
   default_cover:
     # - https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg
-    - https://source.fomal.cc/img/default_cover_1.webp
-    - https://source.fomal.cc/img/default_cover_2.webp
-    - https://source.fomal.cc/img/default_cover_3.webp
-    - https://source.fomal.cc/img/default_cover_4.webp
-    - https://source.fomal.cc/img/default_cover_5.webp
-    - https://source.fomal.cc/img/default_cover_6.webp
-    - https://source.fomal.cc/img/default_cover_7.webp
-    - https://source.fomal.cc/img/default_cover_8.webp
-    - https://source.fomal.cc/img/default_cover_9.webp
-    - https://source.fomal.cc/img/default_cover_10.webp
-    - https://source.fomal.cc/img/default_cover_12.webp
-    - https://source.fomal.cc/img/default_cover_25.webp
-    - https://source.fomal.cc/img/default_cover_99.webp
 
 # Replace Broken Images (替换无法显示的图片)
 error_img:
@@ -676,7 +663,7 @@ text_align_justify: false
 # background: url(https://source.fomal.cc/img/dm4.webp)
 # background: url(https://source.fomal.cc/img/dm5.webp)
 # background: url(https://source.fomal.cc/img/dm6.webp)
-background: url(https://source.fomal.cc/img/dm7.webp)
+# background: url(https://source.fomal.cc/img/dm7.webp)
 # background: url(https://source.fomal.cc/img/dm8.webp)
 # 6，7，8都不错
 

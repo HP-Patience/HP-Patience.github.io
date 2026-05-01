@@ -1,0 +1,111 @@
+version: 5.1.0
+variant: default
+
+navbar:
+    menu:
+        Home: /
+        Archives: /archives
+        Categories: /categories
+        Tags: /tags
+        Story: /story
+        About: /about
+    links:
+        GitHub:
+            icon: fab fa-github
+            url: https://github.com/HP-Patience
+
+sidebar:
+    left:
+        sticky: false
+    right:
+        sticky: false
+
+widgets:
+    - position: left
+      type: profile
+      author: Celyn
+      author_title: Blog Author
+      bio: 费曼学习法，反思近期所学并反馈输出，将所学知识内化。
+      location: Shanghai, China
+      avatar: https://raw.githubusercontent.com/HP-Patience/HP-Patience.github.io/main/avatar_img/me.jpg
+      follow_link: https://github.com/HP-Patience
+      social_links:
+          GitHub:
+              icon: fab fa-github
+              url: https://github.com/HP-Patience
+          Email:
+              icon: fas fa-envelope
+              url: mailto:1249140039@qq.com
+          Twitter:
+              icon: fab fa-twitter
+              url: https://twitter.com
+          RSS:
+              icon: fas fa-rss
+              url: /atom.xml
+    - position: left
+      type: links
+      links:
+          Hexo: https://hexo.io
+          Icarus: https://github.com/ppoffice/hexo-theme-icarus
+    - position: left
+      type: categories
+      limit: 10
+    - position: right
+      type: recent_posts
+      limit: 5
+    - position: right
+      type: archives
+      limit: 10
+      group_by: monthly
+    - position: right
+      type: tags
+      limit: 20
+      orderby: random
+
+article:
+    highlight:
+        theme: atom-one-light
+        clipboard: true
+        fold: unfolded
+    readtime: true
+    update_time: true
+
+search:
+    type: insight
+    insight:
+        cdn: true
+
+comment:
+    type: utterances
+    repo: HP-Patience/HP-Patience.github.io
+    issue_term: title
+    theme: github-light
+
+share:
+    twitter:
+        icon: fab fa-twitter
+    facebook:
+        icon: fab fa-facebook
+    wechat:
+        icon: fab fa-weixin
+    weibo:
+        icon: fab fa-weibo
+
+footer:
+    links:
+        Hexo:
+            icon: fab fa-hexagon
+            url: https://hexo.io
+        Icarus:
+            icon: fab fa-feather
+            url: https://github.com/ppoffice/hexo-theme-icarus
+
+plugins:
+    back_to_top:
+        enable: true
+        icon: fas fa-chevron-up
+    pjax:
+        enable: false
+
+providers:
+    cdn: jsdelivr

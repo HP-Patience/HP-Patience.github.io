@@ -2,6 +2,7 @@
 title: python-debug
 date: 2024-07-19 23:16:46
 tags:
+- Python
 categories: 
 - python
 description: 书生浦语三期任务打卡-python-debug

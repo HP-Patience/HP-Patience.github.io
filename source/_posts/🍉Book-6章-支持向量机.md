@@ -2,6 +2,7 @@
 title: 🍉Book-6章-支持向量机
 date: 2024-05-16 23:17:49
 tags:
+- 机器学习
 categories: 
 - 🍉Book
 description: 西瓜书-第六章-学习笔记 #文章描述

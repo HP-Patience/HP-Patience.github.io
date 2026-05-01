@@ -2,6 +2,7 @@
 title: 【lagent】agent搭建
 date: 2024-09-18 20:54:29
 tags:
+- Agent
 categories: 
 - 书生·浦语三期实战营
 ---

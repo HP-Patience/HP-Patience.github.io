@@ -2,6 +2,7 @@
 title: 【Fine-tuning】XTuner微调个人小助手
 date: 2024-09-04 21:06:54
 tags:
+- 微调
 categories: 
 - 书生·浦语三期实战营
 ---

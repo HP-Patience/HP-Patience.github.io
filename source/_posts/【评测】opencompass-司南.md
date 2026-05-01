@@ -2,6 +2,7 @@
 title: 【评测】opencompass-司南
 date: 2024-09-04 21:23:47
 tags:
+- 评测
 categories: 
 - 书生·浦语三期实战营
 ---

@@ -2,6 +2,7 @@
 title: 8G显存玩转书生大模型Demo
 date: 2024-08-20 22:57:31
 tags:
+- 大模型
 categories: 
 - 书生·浦语三期实战营
 ---

@@ -104,7 +104,7 @@ ignore:
 ## Themes: https://hexo.io/themes/
 
 # theme: landscape
-theme: butterfly
+theme: icarus
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
@@ -149,26 +149,24 @@ live2d:
   mobile:
     show: false # 手机中是否展示
 
-# envelope_comment 留言板信封 看板娘
-# 鼠标一直 悬停 在信封上即可打开信封
+# envelope_comment 留言板信封 看板娘 - Disabled for Icarus theme
 # see https://akilar.top/posts/e2d3c450/
-envelope_comment:
-  enable: true #控制开关
-  custom_pic:      
-    cover: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/violet.jpg #信笺头部图片
-    line: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/line.png #信笺底部图片
-    beforeimg: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/before.png # 信封前半部分
-    afterimg: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/after.png # 信封后半部分
-  message: #信笺正文，多行文本，写法如下
-    - 想和志同道合的朋友一起学习😄
-    - 欢迎大家来交流和分享✨
-    - 有什么想法都可以告诉我哦~
-  bottom: 自动书记人偶竭诚为您服务！ #仅支持单行文本
-  height: #1050px，信封划出的高度
-  path: #【可选】comments 的路径名称。默认为 comments，生成的页面为 comments/index.html
-  front_matter: #【可选】comments页面的 front_matter 配置
-    title: 留言板
-    comments: true
+# envelope_comment:
+#   enable: true
+#   custom_pic:
+#     cover: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/violet.jpg
+#     line: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/line.png
+#     beforeimg: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/before.png
+#     afterimg: https://npm.elemecdn.com/hexo-butterfly-envelope/lib/after.png
+#   message:
+#     - 想和志同道合的朋友一起学习😄
+#     - 欢迎大家来交流和分享✨
+#     - 有什么想法都可以告诉我哦~
+#   bottom: 自动书记人偶竭诚为您服务！
+#   path:
+#   front_matter:
+#     title: 留言板
+#     comments: true
 
 # 数学Latex网页渲染模块
 kramed:
@@ -180,127 +178,97 @@ kramed:
   smartLists: true
   smartypants: true
 
-# footer_beautify
+# footer_beautify - Disabled for Icarus theme
 # 页脚计时器：[Native JS Timer](https://akilar.top/posts/b941af/)
 # 页脚徽标：[Add Github Badge](https://akilar.top/posts/e87ad7f8/)
-footer_beautify:
-  enable:
-    timer: true # 计时器开关
-    bdage: false # 徽标开关
-  priority: 5 #过滤器优先权
-  enable_page: all # 应用页面
-  exclude: #屏蔽页面
-    # - /posts/
-    # - /about/
-  layout: # 挂载容器类型
-    type: id
-    name: footer-wrap
-    index: 0
-  # 计时器部分配置项（看你喜欢哪个，最好下载下来放到自己的项目中不然会增加我网站的负载）
+# footer_beautify:
+#   enable:
+#     timer: true
+#     bdage: false
+#   priority: 5
+#   enable_page: all
+#   exclude:
+#   layout:
+#     type: id
+#     name: footer-wrap
+#     index: 0
+#   runtime_js: /js/footer_runtime_Fomalhaut
+#   swiperpara: 0
+#   bdageitem:
+#     - link: https://hexo.io/
+#       shields: https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo
+#       message: 博客框架为Hexo_v6.2.0
+#     - link: https://butterfly.js.org/
+#       shields: https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender
+#       message: 主题版本Butterfly_v4.3.1
+#     - link: https://vercel.com/
+#       shields: https://img.shields.io/badge/Hosted-Vercel-brightgreen?style=flat&logo=Vercel
+#       message: 本站采用多线部署，主线路托管于Vercel
+#     - link: https://dashboard.4everland.org/
+#       shields: https://img.shields.io/badge/Hosted-4EVERLAND-22DDDD?style=flat&logo=IPFS
+#       message: 本站采用多线部署，备用线路托管于4EVERLAND
+#     - link: https://github.com/
+#       shields: https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub
+#       message: 本站项目由Github托管
+#     - link: http://creativecommons.org/licenses/by-nc-sa/4.0/
+#       shields: https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris
+#       message: 本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可
+#   swiper_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css
+#   swiper_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js
+#   swiperbdage_init_js: https://npm.elemecdn.com/hexo-butterfly-footer-beautify/lib/swiperbdage_init.min.js
 
-  # 这是我的
-  runtime_js: /js/footer_runtime_Fomalhaut
-
-  # 这是--Fomalhaut的  
-  # runtime_js: https://www.fomal.cc/static/js/runtime.js
-  # runtime_css: https://www.fomal.cc/static/css/runtime.min.css 
-
-  # 这是店长的 
-  # runtime_js: https://npm.elemecdn.com/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.js
-  # runtime_css: https://npm.elemecdn.com/hexo-butterfly-footer-beautify@1.0.0/lib/runtime.css
-
-  # 徽标部分配置项
-  swiperpara: 0 #若非0，则开启轮播功能，每行徽标个数，0表示全部显示
-  bdageitem:
-    - link: https://hexo.io/ #徽标指向网站链接
-      shields: https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo #徽标API
-      message: 博客框架为Hexo_v6.2.0 #徽标提示语
-    - link: https://butterfly.js.org/
-      shields: https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender
-      message: 主题版本Butterfly_v4.3.1
-    - link: https://vercel.com/
-      shields: https://img.shields.io/badge/Hosted-Vercel-brightgreen?style=flat&logo=Vercel
-      message: 本站采用多线部署，主线路托管于Vercel
-    - link: https://dashboard.4everland.org/
-    # https://img.shields.io/badge/Hosted-4EVERLAND-3FE2C1?style=flat&logo=IPFS
-      shields: https://img.shields.io/badge/Hosted-4EVERLAND-22DDDD?style=flat&logo=IPFS
-      message: 本站采用多线部署，备用线路托管于4EVERLAND
-    - link: https://github.com/
-      shields: https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub
-      message: 本站项目由Github托管
-    - link: http://creativecommons.org/licenses/by-nc-sa/4.0/
-      shields: https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris
-      message: 本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可
-  swiper_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css
-  swiper_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js
-  swiperbdage_init_js: https://npm.elemecdn.com/hexo-butterfly-footer-beautify/lib/swiperbdage_init.min.js
-
-# 首页分类磁贴新版(店长)
+# 首页分类磁贴新版(店长) - Disabled for Icarus theme
 # hexo-butterfly-categories-card
 # see https://akilar.top/posts/a9131002/
-categoryBar:
-  enable: true # 开关
-  priority: 5 #过滤器优先权
-  enable_page: / # 应用页面
-  layout: # 挂载容器类型
-    type: id
-    name: recent-posts
-    index: 0
-  column: odd # odd：3列 | even：4列
-  row: 1 #显示行数，默认两行，超过行数切换为滚动显示
-  message:
-    - descr: Blog搭建
-      cover: https://source.fomal.cc/img/default_cover_2.webp
-
-    - descr: 🍉Book
-      cover: https://source.fomal.cc/img/dm6.webp
-
-    - descr: Java
-      cover: https://source.fomal.cc/img/dm12.webp
-
-    - descr: 数学建模
-      cover: https://source.fomal.cc/img/dm8.webp  
-
-  custom_css: https://npm.elemecdn.com/hexo-butterfly-categories-card@1.0.0/lib/categorybar.css
+# categoryBar:
+#   enable: true # 开关
+#   priority: 5 #过滤器优先权
+#   enable_page: / # 应用页面
+#   layout: # 挂载容器类型
+#     type: id
+#     name: recent-posts
+#     index: 0
+#   column: odd # odd：3列 | even：4列
+#   row: 1 #显示行数，默认两行，超过行数切换为滚动显示
+#   message:
+#     - descr: Blog搭建
+#     - descr: 🍉Book
+#     - descr: Java
+#     - descr: 数学建模  
+#   custom_css: https://npm.elemecdn.com/hexo-butterfly-categories-card@1.0.0/lib/categorybar.css
 
 
-# 首页分类磁贴1.0（小冰）
-magnet:
-  enable: true
-  priority: 1
-  enable_page: /
-  type: categories
-  devide: 2
-  display:
-    - name: 🍉Book
-      display_name: 🍉Book_Study
-      icon: 📚
-    - name: Java
-      display_name: Java
-      icon: 🎮
-    - name: Blog搭建
-      display_name: Blog搭建
-      icon: 🐱‍👓
-    - name: 数学建模
-      display_name: 数学建模
-      icon: 👩‍💻
-    # - name: 学习
-    #   display_name: 小冰の读书笔记
-    #   icon: 📒
-    # - name: 随想
-    #   display_name: 小冰の胡思乱想
-    #   icon: 💡
-  color_setting:
-    text_color: black
-    text_hover_color: white
-    background_color: "#f2f2f2"
-    background_hover_color: "#69e8f2"
-  layout:
-    type: id
-    name: recent-posts
-    index: 0
-  temple_html: '<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet">${temple_html_item}</div></div>'
-  plus_style: ""
+# 首页分类磁贴1.0（小冰）- Disabled for Icarus theme
+# magnet:
+#   enable: true
+#   priority: 1
+#   enable_page: /
+#   type: categories
+#   devide: 2
+#   display:
+#     - name: 🍉Book
+#       display_name: 🍉Book_Study
+#       icon: 📚
+#     - name: Java
+#       display_name: Java
+#       icon: 🎮
+#     - name: Blog搭建
+#       display_name: Blog搭建
+#       icon: 🐱‍👓
+#     - name: 数学建模
+#       display_name: 数学建模
+#       icon: 👩‍💻
+#   color_setting:
+#     text_color: black
+#     text_hover_color: white
+#     background_color: "#f2f2f2"
+#     background_hover_color: "#69e8f2"
+#   layout:
+#     type: id
+#     name: recent-posts
+#     index: 0
+#   temple_html: '<div class="recent-post-item" style="width:100%;height: auto"><div id="catalog_magnet">${temple_html_item}</div></div>'
+#   plus_style: ""
 
 markdown:
   preset: "default"
@@ -348,49 +316,45 @@ markdown:
 mathjax:
  enable: true
 
-# 文章置顶滚动栏(店长)
+# 文章置顶滚动栏(店长) - Disabled for Icarus theme
 # hexo-butterfly-swiper
 # see https://akilar.top/posts/8e1264d1/
-swiper:
-  enable: true # 开关
-  priority: 5 #过滤器优先权
-  enable_page: / # 应用页面
-  timemode: date #date/updated
-  layout: # 挂载容器类型
-    type: id
-    name: recent-posts
-    index: 0
-  default_descr: 
-  swiper_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css #swiper css依赖
-  swiper_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js #swiper js依赖
-  custom_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css # 适配主题样式补丁
-  custom_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js # swiper初始化方法
+# swiper:
+#   enable: true # 开关
+#   priority: 5 #过滤器优先权
+#   enable_page: / # 应用页面
+#   timemode: date #date/updated
+#   layout: # 挂载容器类型
+#     type: id
+#     name: recent-posts
+#     index: 0
+#   default_descr: 
+#   swiper_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.css
+#   swiper_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper.min.js
+#   custom_css: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiperstyle.css
+#   custom_js: https://npm.elemecdn.com/hexo-butterfly-swiper/lib/swiper_init.js
 
-# 文章双侧栏显示(小冰)
-butterfly_article_double_row:
-  enable: true
+# 文章双侧栏显示(小冰) - Disabled for Icarus theme
+# butterfly_article_double_row:
+#   enable: true
 
-# wowjs动画
-wowjs:
-  enable: true #控制动画开关。true是打开，false是关闭
-  priority: 10 #过滤器优先级
-  mobile: false #移动端是否启用，默认移动端禁用
-  animateitem:
-    # 在浏览器节目按F12进入开发者模式，用检查按键选中指定区块，找到其class类名，按照下列方式制作
-
-    - class: recent-post-item #必填项，需要添加动画的元素的class
-      style: animate__zoomIn #必填项，需要添加的动画
-      duration: 1350ms #选填项，动画持续时间，单位可以是ms也可以是s。例如3s，700ms。
-      delay: 350ms #选填项，动画开始的延迟时间，单位可以是ms也可以是s。例如3s，700ms。
-      offset: 100 #选填项，开始动画的距离（相对浏览器底部）
-      iteration: 1 #选填项，动画重复的次数
-
-    - class: card-widget
-      style: animate__zoomIn
-
-  animate_css: https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/animate.min.css
-  wow_js: https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow.min.js
-  wow_init_js: https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow_init.js
+# wowjs动画 - Disabled for Icarus theme
+# wowjs:
+#   enable: true
+#   priority: 10
+#   mobile: false
+#   animateitem:
+#     - class: recent-post-item
+#       style: animate__zoomIn
+#       duration: 1350ms
+#       delay: 350ms
+#       offset: 100
+#       iteration: 1
+#     - class: card-widget
+#       style: animate__zoomIn
+#   animate_css: https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/animate.min.css
+#   wow_js: https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow.min.js
+#   wow_init_js: https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow_init.js
 
 # hexo-admin authentification
 admin:

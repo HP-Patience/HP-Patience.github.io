@@ -1,0 +1,231 @@
+dark-primary-color = rgb(55, 61, 72)
+dark-primary-color-hover = rgb(67, 74, 86)
+dark-primary-color-active = rgb(44, 49, 58)
+dark-font-color = #c0c0c0
+
+#universe
+    display: none
+
+.navbar-logo,
+.footer-logo
+    .logo-img-dark
+        display: none
+
+body.night
+    background: #0e1225
+
+.night
+    .content code
+        color: rgb(203,186,125)
+
+    #night-nav #night-icon:before
+        content: '\f0eb'
+
+    #universe
+        background: radial-gradient(1600px at 70% 120%, #212750 10%, #020409 100%)
+        display: block
+        position: fixed
+        margin: 0
+        padding: 0
+        border: 0
+        outline: 0
+        left: 0
+        top: 0
+        width: 100%
+        height: 100%
+        pointer-events: none
+
+    img, video, iframe, .waifu, .donate
+        filter: brightness(0.8)
+        -webkit-filter: brightness(0.8)
+
+    .navbar-logo,
+    .footer-logo
+        .logo-img
+            display: none
+        .logo-img-dark
+            display: inline-block
+
+    .navbar-menu
+        background-color: inherit
+    .navbar-main .navbar-menu .navbar-item
+        &:hover,
+        &:focus
+            color: #ffffff
+            background-color: dark-primary-color
+    .navbar,
+    .card
+        background-color: rgba(40,44,52,0.5)
+        backdrop-filter: none
+        -webkit-backdrop-filter: none
+    .card
+        &:hover
+            background-color: rgba(40,44,52,0.8)
+    .footer
+        backdrop-filter: none
+        -webkit-backdrop-filter: none
+        &:before
+            background-color: rgba(40,44,52,0.5)
+
+    .input, .textarea
+        background-color: dark-primary-color-hover
+        border-color: dark-primary-color
+
+    .button.is-primary, .button.is-light, .button.is-small
+        background-color: dark-primary-color
+        color: dark-font-color
+        &:hover, &.is-hovered
+            color: #ffffff
+            background-color: dark-primary-color-hover
+        &:active, &.is-active
+            color: #ffffff
+            background-color: dark-primary-color-active
+    .button.is-white,
+    .button.is-transparent
+        background-color: transparent
+        &:hover
+            background-color: dark-primary-color !important
+    .pagination .pagination-next,
+    .pagination .pagination-previous
+    .pagination-link:not(.is-current)
+        color: dark-font-color
+        background-color: dark-primary-color
+        a
+            color: dark-font-color
+    .pagination-link.is-current
+        background-color: dark-primary-color-hover
+        border-color: dark-primary-color-hover
+
+    body,
+    strong,
+    time,
+    .title,
+    .footer,
+    .card,
+    .content h1,
+    .content h2,
+    .content h3,
+    .content h4,
+    .content h5,
+    .content h6,
+    .navbar-item,
+    .navbar-item.is-active,
+    .navbar-link,
+    .menu-list a,
+    .menu-label,
+    .level-item,
+    .input,
+    .textarea,
+    .button.is-white,
+    .button.is-transparent
+        color: dark-font-color
+    .media-content,
+    .has-text-grey,
+    .link-muted
+        color: dark-font-color !important
+    a
+        color: rgb(82, 153, 224)
+        &:hover
+            color: #ffffff
+
+    .content blockquote
+        background-color: dark-primary-color
+        border-color: dark-primary-color-hover
+
+    .content table thead td,
+    .content table thead th
+        color: dark-font-color
+    .content table td,
+    .content table th
+        border-color: dark-primary-color-hover
+
+    hr
+        background-color: dark-primary-color-hover
+
+    article.article, article.media
+        .title a
+            background-image: linear-gradient(transparent calc(100% - 1px), dark-font-color 1px)
+        .title:hover a
+            color: dark-font-color !important
+    .tag:not(body)
+        color: dark-font-color
+        background-color: dark-primary-color
+    .tag.is-grey
+        background-color: dark-primary-color-hover
+    .menu-list a:hover
+        background-color: dark-primary-color
+    .menu-list li ul
+        border-color: dark-primary-color
+
+    .timeline .media:last-child:after
+        background-color: rgb(37,41,54)
+    .timeline
+        border-color: dark-primary-color-hover
+    .timeline .media:before
+        background-color: dark-primary-color-hover
+
+    .searchbox
+        .searchbox-container,
+        .searchbox-header,
+        .searchbox-header .searchbox-input,
+        .searchbox-header .searchbox-close,
+        .searchbox-body,
+        .searchbox-result-section,
+        .searchbox-result-item
+            color: dark-font-color
+            background-color: dark-primary-color
+            border-color: dark-primary-color-hover
+        .searchbox-container .searchbox-result-section .searchbox-result-item:hover,
+        .searchbox-container .searchbox-result-section .searchbox-result-item.active,
+        .searchbox-container .searchbox-header .searchbox-close:hover
+            color: #ffffff
+            background-color: dark-primary-color-hover
+
+    ::selection
+        color: #ffffff
+        background-color: rgba(52,109,167,0.8)
+    ::-moz-selection
+        color: #ffffff
+        background-color: rgba(52,109,167,0.8)
+
+    input:-webkit-autofill
+        -webkit-text-fill-color: dark-font-color !important
+        box-shadow: 0 0 0px 1000px dark-primary-color inset
+
+    .hljs
+        display: block
+        overflow-x: auto
+        padding: 0.5em
+        color: #abb2bf
+        background: #282c34
+    .hljs-comment, .hljs-quote
+        color: #5c6370
+        font-style: italic
+    .hljs-doctag, .hljs-keyword, .hljs-formula
+        color: #c678dd
+    .hljs-section, .hljs-name, .hljs-selector-tag, .hljs-deletion, .hljs-subst
+        color: #e06c75
+    .hljs-literal
+        color: #56b6c2
+    .hljs-string, .hljs-regexp, .hljs-addition, .hljs-attribute, .hljs-meta-string
+        color: #98c379
+    .hljs-built_in, .hljs-class .hljs-title
+        color: #e6c07b
+    .hljs-attr, .hljs-variable, .hljs-template-variable, .hljs-type, .hljs-selector-class, .hljs-selector-attr, .hljs-selector-pseudo, .hljs-number
+        color: #d19a66
+    .hljs-symbol, .hljs-bullet, .hljs-link, .hljs-meta, .hljs-selector-id, .hljs-title
+        color: #61aeee
+    .hljs-emphasis
+        font-style: italic
+    .hljs-strong
+        font-weight: bold
+    .hljs-link
+        text-decoration: underline
+
+    .article-excerpt::after
+        background: linear-gradient(transparent, #1a1e2e)
+
+@media (prefers-color-scheme: dark)
+    body:not(.light)
+        background: #0e1225
+        @extend .night
