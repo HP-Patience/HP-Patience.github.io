@@ -83,6 +83,7 @@ comment:
     theme: github-light
 
 share:
+    type: sharejs
     twitter:
         icon: fab fa-twitter
     facebook:

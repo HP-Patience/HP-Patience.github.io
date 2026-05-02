@@ -60,6 +60,6 @@ function tryInit() {
 tryInit();
 
 window.addEventListener("pageshow", function() {
-    isNight = localStorage.getItem("night") || "true";
+    isNight = localStorage.getItem("night") || "false";
     tryInit();
 });
