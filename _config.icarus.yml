@@ -7,6 +7,7 @@ navbar:
         Archives: /archives
         Categories: /categories
         Tags: /tags
+        Gallery: https://gallery-xi-jet.vercel.app
         Story: /story
         About: /about
     links:

@@ -1,4 +1,4 @@
-var isNight = localStorage.getItem("night") || "true";
+var isNight = localStorage.getItem("night") || "false";
 
 function applyNightMode() {
     if (isNight === "true") {
