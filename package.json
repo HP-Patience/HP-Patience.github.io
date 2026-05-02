@@ -37,6 +37,6 @@
     "markdown-it-checkbox": "^1.1.0",
     "markdown-it-expandable": "^1.0.2",
     "markdown-it-imsize": "^2.0.1",
-    "mermaid": "^10.7.0"
+    "mermaid": "^11.14.0"
   }
 }
