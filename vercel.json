@@ -1,0 +1,6 @@
+{
+    "buildCommand": "npm run build",
+    "devCommand": "npm run server",
+    "outputDirectory": "public",
+    "framework": null
+}
