@@ -7,6 +7,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         let scrollHandler = null;
         let resizeHandler = null;
+        const originalPosition = columnLeft.style.position || '';
+        const originalTop = columnLeft.style.top || '';
+        const originalBottom = columnLeft.style.bottom || '';
+        const originalWidth = columnLeft.style.width || '';
+        const originalZIndex = columnLeft.style.zIndex || '';
 
         function updateSidebarPosition() {
             const sidebarHeight = columnLeft.offsetHeight;
@@ -17,14 +22,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (sidebarHeight <= windowHeight) {
                 if (scrollTop <= maxScroll) {
-                    columnLeft.style.position = 'fixed';
+                    columnLeft.style.position = 'sticky';
                     columnLeft.style.top = '1.5rem';
                     columnLeft.style.bottom = 'auto';
                 } else {
-                    const bottomOffset = maxScroll - scrollTop + sidebarHeight;
-                    columnLeft.style.position = 'absolute';
-                    columnLeft.style.bottom = Math.max(1.5 * 16, bottomOffset) + 'px';
-                    columnLeft.style.top = 'auto';
+                    columnLeft.style.position = '';
+                    columnLeft.style.top = '';
+                    columnLeft.style.bottom = '';
                 }
             } else {
                 columnLeft.style.position = '';
@@ -35,11 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         function checkAndApplySticky() {
             if (window.innerWidth >= 769) {
-                columnLeft.style.position = 'fixed';
-                columnLeft.style.top = '1.5rem';
-                columnLeft.style.bottom = 'auto';
                 columnLeft.style.width = columnLeft.offsetWidth + 'px';
-                columnLeft.style.zIndex = '100';
                 
                 if (!scrollHandler) {
                     scrollHandler = updateSidebarPosition;
@@ -47,11 +47,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
                 updateSidebarPosition();
             } else {
-                columnLeft.style.position = '';
-                columnLeft.style.top = '';
-                columnLeft.style.bottom = '';
-                columnLeft.style.width = '';
-                columnLeft.style.zIndex = '';
+                columnLeft.style.position = originalPosition;
+                columnLeft.style.top = originalTop;
+                columnLeft.style.bottom = originalBottom;
+                columnLeft.style.width = originalWidth;
+                columnLeft.style.zIndex = originalZIndex;
                 
                 if (scrollHandler) {
                     window.removeEventListener('scroll', scrollHandler);
