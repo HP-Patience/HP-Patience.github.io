@@ -28,7 +28,7 @@ widgets:
       author_title: Blog Author
       bio: 费曼学习法，反思近期所学并反馈输出，将所学知识内化。
       location: Shanghai, China
-      avatar: https://raw.githubusercontent.com/HP-Patience/HP-Patience.github.io/main/avatar_img/me.jpg
+      avatar: /avatar_img/me.jpg
       follow_link: https://github.com/HP-Patience
       social_links:
           GitHub:
@@ -62,6 +62,11 @@ widgets:
       type: tags
       limit: 20
       orderby: random
+    - position: right
+      type: toc
+      post: true
+      collapsed: false
+      depth: 3
 
 article:
     highlight:
@@ -83,15 +88,7 @@ comment:
     theme: github-light
 
 share:
-    type: sharejs
-    twitter:
-        icon: fab fa-twitter
-    facebook:
-        icon: fab fa-facebook
-    wechat:
-        icon: fab fa-weixin
-    weibo:
-        icon: fab fa-weibo
+    type: addtoany
 
 footer:
     links:
@@ -103,11 +100,8 @@ footer:
             url: https://github.com/ppoffice/hexo-theme-icarus
 
 plugins:
-    back_to_top:
-        enable: true
-        icon: fas fa-chevron-up
-    pjax:
-        enable: false
+    back_to_top: true
+    pjax: false
 
 providers:
     cdn: jsdelivr

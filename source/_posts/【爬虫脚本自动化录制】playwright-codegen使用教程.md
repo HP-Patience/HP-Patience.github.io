@@ -1,10 +1,9 @@
 ---
-title: 【爬虫脚本自动化录制】playwright codegen使用教程
-date: 2026-05-02 23:24:38
+title: 【爬虫脚本自动化录制】playwright-codegen使用教程
+date: 2026-04-14 07:28:09
 tags:
 - 爬虫
 ---
-
 
 # 1 前言
 > 在做 Web 自动化测试、爬虫脚本开发时，手动写定位、写操作步骤往往耗时又容易出错。Playwright 官方提供了一个**零代码录制神器：`codegen`**，只需要在浏览器里用鼠标点击，就能自动生成可直接运行的 Python/Java/JS 自动化代码，极大提升开发效率。
@@ -47,9 +46,8 @@ playwright codegen https://www.baidu.com
 - 左侧：浏览器页面（你手动操作）
 - 右侧：Playwright Inspector（实时生成代码）
 
-![](https://i-blog.csdnimg.cn/direct/4c089f544cae46cdbe3171c56538a6c9.png#pic_center)
 
-
+![](PixPin_2026-04-14_07-47-31.png)
 
 ## 4.2 操作演示
 1. 在百度搜索框输入“CSDN”
@@ -57,9 +55,7 @@ playwright codegen https://www.baidu.com
 3. 等待页面跳转
 4. 关闭浏览器
 
-![](https://i-blog.csdnimg.cn/direct/d18062e6311e4ba18073c5fe0afa6449.png#pic_center)
-
-
+![](PixPin_2026-04-14_07-49-24.png)
 
 右侧会**自动生成完整 Python 代码**，复制即可直接运行。
 生成代码如下：
@@ -111,11 +107,8 @@ playwright codegen -o auto_test.py --slowmo 1000 --device="iPhone 15" https://ww
 ```bash
 playwright codegen -o csdn_login.py https://passport.csdn.net/login
 ```
-![](https://i-blog.csdnimg.cn/direct/3559a9c3596149588b0f37b8c513a3e3.png#pic_center)
 
-
-
-
+![](PixPin_2026-04-14_07-54-46.png)
 ## 6.2 手动操作步骤
 1. 选择“密码登录”
 2. 输入用户名
@@ -166,9 +159,7 @@ page.get_by_role("button", name="登录").wait_for(state="visible")
 expect(page.get_by_role("button", name="登录")).to_be_enabled()
 ```
 
-![](https://i-blog.csdnimg.cn/direct/8b9cf6295b7246e9a66831db8ffb93a0.png#pic_center)
-
-
+![](PixPin_2026-04-14_08-57-24.png)
 
 ```PYTHON
 # 1.断言“验证码登录”文字对应的元素在页面上可见，用于判断登录区域加载完成 
@@ -190,3 +181,5 @@ login_frame.get_by_text("登录").click()
 ```
 ## 7.4 去掉冗余操作
 删除重复的 `click()`、无用的等待和多余定位。
+
+同文收录于CSDN：[文章链接](https://blog.csdn.net/2301_82023330/article/details/160131394)

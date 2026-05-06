@@ -1,5 +1,5 @@
 ---
-title: 【提示词工程】LangGPT结构化提示词编写
+title: 【Prompt Engineering】LangGPT结构化提示词编写
 date: 2024-09-03 13:36:50
 tags:
 - 提示词工程
@@ -7,21 +7,20 @@ categories:
 - 书生·浦语三期实战营
 ---
 
+# 1.前言
+>在日常使用大模型时，我发现它经常在数字比对这类基础问题上出错，并且输出结果很不严谨。为了解决这个问题，我尝试使用Prompt Engineering，
+并在网上找到了一个开源的「结构化提示词框架」-- LangGPT，以下是我的使用过程记录。
 
 
-# 参考内容：
 
-1.LangGPT社区：[‌‌‬﻿⁠﻿⁠⁠﻿‌⁠‬‌⁠‍‬⁠‬‬﻿‬‌‌‌‍﻿﻿‌‌﻿‬⁠LangGPT结构化提示词 - 飞书云文档](https://langgptai.feishu.cn/wiki/QaArwzc7biR5nqkSo3mcwzGfnhf)
-2.浦语开源文档[书生浦语-浦语提示词工程实践](https://github.com/InternLM/Tutorial/tree/camp3/docs/L1/Prompt)
-3.文档：[系统论述文章： 构建高性能 Prompt 之路——结构化 Prompt](https://mp.weixin.qq.com/s/N9BrkDqvkIHQD7TTnhNk6Q)
 
 ---
-# 步骤
+# 2.实现步骤
 
 step0：前期准备
-0.1：创建虚拟环境->激活虚拟环境->安装必要包文件
-0.2：创建项目路径->进入项目
-0.3：安装必要软件，如tmux
+1. 创建虚拟环境->激活虚拟环境->安装必要包文件
+2. 创建项目路径->进入项目
+3. 安装必要软件，如tmux
 
 step1：模型部署
 模型下载->部署模型为OpenAI server->图形化界面调用
@@ -31,11 +30,11 @@ step3：langgpt结构化提示词⁠‬编写⁠‍‬⁠‬‬﻿‬‌‌‌�
 
 ---
 
-# tmux扫盲
+# 3.tmux使用
 
-	tmux可以在终端中创建终端，将进程维持在后台。
+tmux可以在终端中创建终端，将进程维持在后台。
 	
-	当我们下载模型时，使用tmux在后台下载，即便我们断开ssh连接，下载也不会中断。
+所以当我们下载模型，使用tmux在后台下载时，即便我们断开ssh连接，下载也不会中断。
 
 step1：部署模型为OpenAI server
 
@@ -166,3 +165,9 @@ PS：估计InternLM2-chat-1_8b版本太久远了，所以回答不出来🤔
 ==加入系统提示词后：==
 PS：效果明显变好了😋
 ![](3.png)
+
+# Reference：
+
+1.LangGPT社区：[‌‌‬﻿⁠﻿⁠⁠﻿‌⁠‬‌⁠‍‬⁠‬‬﻿‬‌‌‌‍﻿﻿‌‌﻿‬⁠LangGPT结构化提示词 - 飞书云文档](https://langgptai.feishu.cn/wiki/QaArwzc7biR5nqkSo3mcwzGfnhf)
+2.浦语开源文档[书生浦语-浦语提示词工程实践](https://github.com/InternLM/Tutorial/tree/camp3/docs/L1/Prompt)
+3.文档：[系统论述文章： 构建高性能 Prompt 之路——结构化 Prompt](https://mp.weixin.qq.com/s/N9BrkDqvkIHQD7TTnhNk6Q)
