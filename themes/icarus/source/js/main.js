@@ -1,10 +1,15 @@
 /* eslint-disable node/no-unsupported-features/node-builtins */
 (function($, moment, ClipboardJS, config) {
-    window.addEventListener('load', function() {
+    function hideLoader() {
         const loaderWrapper = document.getElementById('loader-wrapper');
         if (loaderWrapper) {
             loaderWrapper.classList.add('loaded');
         }
+    }
+    
+    window.addEventListener('load', hideLoader);
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(hideLoader, 3000);
     });
 
     $('.article img:not(".not-gallery-item")').each(function() {

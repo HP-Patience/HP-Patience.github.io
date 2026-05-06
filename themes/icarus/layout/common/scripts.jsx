@@ -42,6 +42,7 @@ module.exports = class extends Component {
             <script src={url_for('/js/imaegoo/night.js')}></script>
             <Plugins site={site} config={config} page={page} helper={helper} head={false} />
             <script src={url_for('/js/main.js')} defer></script>
+            <script src={url_for('/js/sticky-sidebar.js')} defer></script>
             <script dangerouslySetInnerHTML={{ 
                 __html: `
                     (function() {
