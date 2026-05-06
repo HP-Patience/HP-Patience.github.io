@@ -1,0 +1,7 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "/plugin/aplayer.json",
+    "description": "Enable APlayer music player",
+    "type": "boolean",
+    "default": false
+}
