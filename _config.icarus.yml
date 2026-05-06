@@ -108,7 +108,7 @@ footer:
 
 plugins:
     back_to_top: true
-    pjax: false
+    pjax: true
     aplayer: true
     cookie_consent:
         type: info
