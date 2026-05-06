@@ -16,7 +16,17 @@ module.exports = class extends Component {
 
         return <html lang={language ? language.substr(0, 2) : ''}>
             <Head site={site} config={config} helper={helper} page={page} />
-            <body class={`is-${columnCount}-column`}>
+            <body class={`is-${columnCount}-column page-${page.layout}`}>
+                <div id="loader-wrapper">
+                    <div class="wrapper">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="shadow"></div>
+                        <div class="shadow"></div>
+                        <div class="shadow"></div>
+                    </div>
+                </div>
                 <div id="universe"></div>
                 <Navbar config={config} helper={helper} page={page} />
                 <section class="section">

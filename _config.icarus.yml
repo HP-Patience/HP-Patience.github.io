@@ -45,28 +45,35 @@ widgets:
               url: /atom.xml
     - position: left
       type: links
+      exclude: ['post']
       links:
           Hexo: https://hexo.io
           Icarus: https://github.com/ppoffice/hexo-theme-icarus
     - position: left
+      type: toc
+      include: ['post']
+      post: true
+      collapsed: false
+    - position: left
       type: categories
-      limit: 10
+      include: ['post']
+      limit: 0
     - position: right
       type: recent_posts
+      exclude: ['post']
       limit: 5
     - position: right
       type: archives
+      exclude: ['post']
       limit: 10
       group_by: monthly
-    - position: right
+    - position: left
       type: tags
       limit: 20
       orderby: random
-    - position: right
-      type: toc
-      post: true
-      collapsed: false
-      depth: 3
+
+
+toc: true
 
 article:
     highlight:
@@ -102,6 +109,12 @@ footer:
 plugins:
     back_to_top: true
     pjax: false
+    cookie_consent:
+        type: info
+        theme: edgeless
+        static: false
+        position: bottom-left
+        policyLink: 'https://www.cookiesandyou.com/'
 
 providers:
     cdn: jsdelivr

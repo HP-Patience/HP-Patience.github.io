@@ -307,7 +307,7 @@ markdown:
     - name: markdown-it-container
       options: danger
   anchors:
-    level: 2
+    level: 1
     collisionSuffix: ""
     permalink: false
     permalinkClass: "header-anchor"

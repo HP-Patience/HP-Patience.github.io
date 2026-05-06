@@ -21,10 +21,23 @@ function formatWidgets(widgets) {
     return result;
 }
 
+function isWidgetVisible(widget, page) {
+    if (widget.include && Array.isArray(widget.include)) {
+        return widget.include.includes(page.layout);
+    }
+    if (widget.exclude && Array.isArray(widget.exclude)) {
+        return !widget.exclude.includes(page.layout);
+    }
+    return true;
+}
+
 function hasColumn(widgets, position, config, page) {
     const showToc = (config.toc === true) && ['page', 'post'].includes(page.layout);
     if (Array.isArray(widgets)) {
         return typeof widgets.find(widget => {
+            if (!isWidgetVisible(widget, page)) {
+                return false;
+            }
             if (widget.type === 'toc' && !showToc) {
                 return false;
             }
@@ -84,7 +97,9 @@ class Widgets extends Component {
             'is-sticky': isColumnSticky(config, position)
         })}>
             {widgets.map(widget => {
-                // widget type is not defined
+                if (!isWidgetVisible(widget, page)) {
+                    return null;
+                }
                 if (!widget.type) {
                     return null;
                 }

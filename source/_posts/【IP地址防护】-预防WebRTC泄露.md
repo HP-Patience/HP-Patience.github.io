@@ -5,7 +5,7 @@ tags:
 - 网络安全
 ---
 
-# 1 什么是 WebRTC 泄露（WebRTC Leak），如何预防
+# 什么是 WebRTC 泄露（WebRTC Leak），如何预防
 
 > WebRTC（Web Real-Time Communication）是浏览器提供的实时音视频与点对点数据通道技术。**WebRTC 泄露** 指的是在使用浏览器或某些应用时，WebRTC 的连接流程（ICE 候选交换）意外暴露了本地或真实公网 IP 地址，导致即便你在用 VPN/代理，目标网站或第三方仍可能看到你的真实 IP 地址或局域网地址，从而破坏隐私与匿名性。
 
@@ -22,14 +22,14 @@ chrome需要安装扩展来避免WebRTC 泄露，推荐一个开源扩展
 [chrome扩展地址](https://chromewebstore.google.com/detail/webrtc-control/fjkmabmdepjfammlpliljpnbhleegehm)
 
 
-# 2 使用 IPPure 检查 WebRTC 泄露情况
-## 2.1 安装前：
+# 使用 IPPure 检查 WebRTC 泄露情况
+## 安装前：
 [IPPure链接地址](https://ippure.com/Browser-WebRTC-Leak-Detect.html)
 ![](PixPin_2026-05-02_22-53-07.png)
 
-## 2.2 安装后 ：
+## 安装后 ：
 ![](PixPin_2026-05-02_22-53-10.png)
 ![](PixPin_2026-05-02_22-53-16.png)
 
-Reference：
+# Reference：
 1. [WebRTC解释](https://ippure.com/Browser-WebRTC-Leak-Detect.html)

@@ -175,6 +175,8 @@ module.exports = class extends Component {
             {hlTheme ? <link rel="stylesheet" href={cdn('highlight.js', '11.7.0', 'styles/' + hlTheme + '.css')} /> : null}
             <link rel="stylesheet" href={fontCssUrl[variant]} />
             <link rel="stylesheet" href={url_for('/css/' + variant + '.css')} />
+            <link rel="stylesheet" href={url_for('/css/loader.css')} />
+            <link rel="stylesheet" href={url_for('/css/unsticky-sidebar.css')} />
             <link rel="stylesheet" href={cdn('lightgallery', '2.7.2', 'css/lightgallery-bundle.min.css')} />
             <script dangerouslySetInnerHTML={{ __html: `MathJax={tex:{inlineMath:[['$','$'],['\\\\(','\\\\)']],displayMath:[['$$','$$'],['\\\\[','\\\\]']]},options:{ignoreClass:'no-mathjax',processClass:'mathjax-process'}}` }}></script>
             <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>

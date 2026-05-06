@@ -1,5 +1,12 @@
 /* eslint-disable node/no-unsupported-features/node-builtins */
 (function($, moment, ClipboardJS, config) {
+    window.addEventListener('load', function() {
+        const loaderWrapper = document.getElementById('loader-wrapper');
+        if (loaderWrapper) {
+            loaderWrapper.classList.add('loaded');
+        }
+    });
+
     $('.article img:not(".not-gallery-item")').each(function() {
         // wrap images with link and add caption if possible
         if ($(this).parent('a').length === 0) {
@@ -144,7 +151,11 @@
             $mask.toggleClass('is-active');
         }
 
-        $toc.on('click', toggleToc);
+        $toc.on('click', function(e) {
+            if (!$(e.target).closest('a').length) {
+                toggleToc();
+            }
+        });
         $mask.on('click', toggleToc);
         $('.navbar-main .catalogue').on('click', toggleToc);
     }

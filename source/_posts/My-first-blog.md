@@ -1,12 +1,12 @@
 ---
 title: My first blog
 date: 2024-04-23 00:34:12
+categories:
+  - Story
 tags:
 - 随笔
+hidden: true
 ---
-
-
-
 
 
 # 大事件
