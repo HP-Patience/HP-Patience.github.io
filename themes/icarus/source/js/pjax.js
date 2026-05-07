@@ -28,8 +28,31 @@
     document.addEventListener('pjax:complete', function() {
         // 重新初始化评论系统
         var commentContainer = document.querySelector('.comment-container');
-        if (commentContainer && typeof window.utterancesLoad === 'function') {
-            window.utterancesLoad();
+        if (!commentContainer) return;
+        
+        var commentType = commentContainer.getAttribute('data-comment-type');
+        var commentConfig = commentContainer.getAttribute('data-comment-config');
+        
+        if (commentType === 'utterances' && commentConfig) {
+            // 清除旧的评论
+            commentContainer.innerHTML = '';
+            
+            try {
+                var config = JSON.parse(commentConfig);
+                var script = document.createElement('script');
+                script.src = 'https://utteranc.es/client.js';
+                script.setAttribute('repo', config.repo);
+                script.setAttribute('issue-term', config['issue-term']);
+                script.setAttribute('theme', config.theme);
+                script.setAttribute('crossorigin', 'anonymous');
+                script.async = true;
+                if (config.label) {
+                    script.setAttribute('label', config.label);
+                }
+                commentContainer.appendChild(script);
+            } catch (e) {
+                console.warn('Failed to load utterances:', e);
+            }
         }
     });
 
