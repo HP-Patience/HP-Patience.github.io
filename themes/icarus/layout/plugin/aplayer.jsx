@@ -41,6 +41,12 @@ class APlayer extends Component {
                         listFolded: true,
                         audio: [
                             {
+                                name: '\\u611b',
+                                artist: 'seto',
+                                url: '${musicPath}%E6%84%9B-seto.mp3',
+                                cover: '${musicPath}%E6%84%9B-seto.jpg'
+                            },
+                            {
                                 name: 'Collapsing World',
                                 artist: 'Lightscape',
                                 url: '${musicPath}Collapsing%20World.mp3',
@@ -63,12 +69,6 @@ class APlayer extends Component {
                                 artist: '恰见明月栖山',
                                 url: '${musicPath}Komorebi.mp3',
                                 cover: '${musicPath}Komorebi.jpg'
-                            },
-                            {
-                                name: '\\u611b',
-                                artist: 'seto',
-                                url: '${musicPath}%E6%84%9B-seto.mp3',
-                                cover: '${musicPath}%E6%84%9B-seto.jpg'
                             }
                         ]
                     });
