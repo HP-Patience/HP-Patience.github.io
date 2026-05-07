@@ -98,7 +98,7 @@ APlayer.Cacheable = cacheComponent(APlayer, 'plugin.aplayer', props => {
     return {
         cssUrl: helper.cdn('aplayer', '1.10.1', 'dist/APlayer.min.css'),
         jsUrl: helper.cdn('aplayer', '1.10.1', 'dist/APlayer.min.js'),
-        musicPath: '/blog_music/',
+        musicPath: 'https://cdn.jsdelivr.net/gh/HP-Patience/HP-Patience.github.io@main/source/blog_music/',
         head
     };
 });
