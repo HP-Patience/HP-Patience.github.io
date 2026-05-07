@@ -16,16 +16,18 @@ module.exports = class extends Component {
         return <div class="card" id="comments">
             <div class="card-content">
                 <h3 class="title is-5">{__('article.comments')}</h3>
-                {(() => {
-                    try {
-                        let Comment = view.require('comment/' + comment.type);
-                        Comment = Comment.Cacheable ? Comment.Cacheable : Comment;
-                        return <Comment config={config} page={page} helper={helper} comment={comment} />;
-                    } catch (e) {
-                        logger.w(`Icarus cannot load comment "${comment.type}"`);
-                        return null;
-                    }
-                })()}
+                <div class="comment-container" data-comment-type={comment.type}>
+                    {(() => {
+                        try {
+                            let Comment = view.require('comment/' + comment.type);
+                            Comment = Comment.Cacheable ? Comment.Cacheable : Comment;
+                            return <Comment config={config} page={page} helper={helper} comment={comment} />;
+                        } catch (e) {
+                            logger.w(`Icarus cannot load comment "${comment.type}"`);
+                            return null;
+                        }
+                    })()}
+                </div>
             </div>
         </div>;
     }

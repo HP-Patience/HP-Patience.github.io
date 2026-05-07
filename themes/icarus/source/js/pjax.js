@@ -15,9 +15,7 @@
                     '.navbar-end',
                     '.searchbox link',
                     '.searchbox script',
-                    '#back-to-top',
-                    '#comments link',
-                    '#comments script'
+                    '#back-to-top'
                 ],
                 cacheBust: false
             });
@@ -26,17 +24,14 @@
         }
     }
 
-    // // Listen for start of Pjax
-    // document.addEventListener('pjax:send', function() {
-    //     return;
-    //     // TODO pace start loading animation
-    // })
-
-    // // Listen for completion of Pjax
-    // document.addEventListener('pjax:complete', function() {
-    //     return;
-    //     // TODO pace stop loading animation
-    // })
+    // Listen for completion of Pjax
+    document.addEventListener('pjax:complete', function() {
+        // 重新初始化评论系统
+        var commentContainer = document.querySelector('.comment-container');
+        if (commentContainer && typeof window.utterancesLoad === 'function') {
+            window.utterancesLoad();
+        }
+    });
 
     document.addEventListener('DOMContentLoaded', () => initPjax());
 }());
