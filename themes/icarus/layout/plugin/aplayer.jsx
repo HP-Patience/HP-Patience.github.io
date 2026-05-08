@@ -47,28 +47,10 @@ class APlayer extends Component {
                                 cover: '${musicPath}%E6%84%9B-seto.jpg'
                             },
                             {
-                                name: 'Collapsing World',
-                                artist: 'Lightscape',
-                                url: '${musicPath}Collapsing%20World.mp3',
-                                cover: '${musicPath}Collapsing%20World.jpg'
-                            },
-                            {
-                                name: 'Daylight',
-                                artist: 'Seredris',
-                                url: '${musicPath}Daylight.mp3',
-                                cover: '${musicPath}Daylight.jpg'
-                            },
-                            {
                                 name: "Kingdom Hearts \\u2022 Xion\\'s Theme",
                                 artist: 'Jenny',
                                 url: '${musicPath}Kingdom%20Hearts%20%E2%80%A2%20Xion\\'s%20Theme.mp3',
                                 cover: '${musicPath}Kingdom%20Hearts%20%E2%80%A2%20Xion\\'s%20Theme.jpg'
-                            },
-                            {
-                                name: 'Komorebi',
-                                artist: '恰见明月栖山',
-                                url: '${musicPath}Komorebi.mp3',
-                                cover: '${musicPath}Komorebi.jpg'
                             }
                         ]
                     });
