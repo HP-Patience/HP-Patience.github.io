@@ -5,6 +5,7 @@ tags:
 - 评测
 categories: 
 - 书生·浦语三期实战营
+description: 使用OpenCompass司南评测工具对大模型进行全方位评测，了解模型性能指标和能力边界。
 ---
 
 # 参考文档

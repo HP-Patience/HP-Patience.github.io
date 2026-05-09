@@ -5,6 +5,7 @@ tags:
 - Agent
 categories: 
 - 书生·浦语三期实战营
+description: 使用Lagent框架搭建AI Agent智能体，学习Agent技术原理和实践，包括自定义工具扩展和Web UI部署。
 ---
 
 # 启动webui服务

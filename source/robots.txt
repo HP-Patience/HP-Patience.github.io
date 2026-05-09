@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /node_modules/
+Disallow: /source/
+Disallow: /themes/
+Disallow: /scripts/
+Disallow: /.*
+Disallow: /*.md$
+
+Sitemap: https://hp-patience.github.io/sitemap.xml
+Sitemap: https://hp-patience.github.io/baidusitemap.xml

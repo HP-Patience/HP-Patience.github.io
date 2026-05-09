@@ -3,6 +3,7 @@ title: 【IP地址防护】-预防WebRTC泄露
 date: 2026-05-02 23:08:03
 tags:
 - 网络安全
+description: 详解WebRTC泄露原理及防护方法，保护你的真实IP地址不被泄露，提升网络隐私安全。
 ---
 
 # 什么是 WebRTC 泄露（WebRTC Leak），如何预防

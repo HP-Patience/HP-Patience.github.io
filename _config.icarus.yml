@@ -1,6 +1,32 @@
 version: 5.1.0
 variant: default
 
+head:
+    meta:
+        keywords: 'AI大模型,深度学习,编程技术,Python,机器学习,技术博客,学习记录'
+        description: '专注于AI大模型、深度学习、编程技术的学习博客，分享费曼学习法实践与技术成长之路。'
+    manifest:
+        name: 'Celyn_blog'
+        short_name: 'Celyn'
+        description: 'AI学习与技术分享博客'
+        theme_color: '#ffffff'
+        background_color: '#ffffff'
+        icons:
+            - src: '/img/logo.svg'
+              sizes: '192x192'
+              type: 'image/svg+xml'
+    open_graph:
+        type: 'website'
+        site_name: 'Celyn_blog | AI学习与技术分享'
+        twitter_card: 'summary_large_image'
+        twitter_site: '@Celyn'
+    structured_data:
+        type: 'Blog'
+        publisher: 'Celyn_blog'
+    canonical_url: true
+    rss: /atom.xml
+    favicon: /img/favicon.svg
+
 navbar:
     menu:
         Home: /

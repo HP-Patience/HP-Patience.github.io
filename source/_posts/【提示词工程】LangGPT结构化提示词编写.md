@@ -5,6 +5,7 @@ tags:
 - 提示词工程
 categories: 
 - 书生·浦语三期实战营
+description: 学习使用LangGPT结构化提示词框架优化大模型输出，提升LLM在数字比对等任务上的准确性。
 ---
 
 # 前言

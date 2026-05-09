@@ -5,6 +5,7 @@ tags:
 - Hexo
 categories: 
 - Blog搭建
+description: Hexo博客搭建过程中遇到的各种问题及解决方案，包括deploy部署、图片显示、端口占用、Latex渲染等问题。
 ---
 
 

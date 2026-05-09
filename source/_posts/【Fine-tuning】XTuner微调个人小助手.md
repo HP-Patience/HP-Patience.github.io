@@ -5,6 +5,7 @@ tags:
 - 微调
 categories: 
 - 书生·浦语三期实战营
+description: 使用XTuner工具对大模型进行微调，打造专属个人小助手，学习LLM微调技术和实践经验。
 ---
 
 

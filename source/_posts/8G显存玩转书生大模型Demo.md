@@ -5,6 +5,7 @@ tags:
 - 大模型
 categories: 
 - 书生·浦语三期实战营
+description: 详细介绍如何在8G显存环境下部署和运行书生大模型Demo，包括InternLM2-Chat-1.8B、InternLM-XComposer2-VL-1.8B和InternVL2-2B模型的部署教程。
 ---
 
 # 环境配置

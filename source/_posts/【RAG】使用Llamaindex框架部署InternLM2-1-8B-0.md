@@ -5,6 +5,7 @@ tags:
 - RAG
 categories: 
 - 书生·浦语三期实战营
+description: 学习使用LlamaIndex框架结合InternLM2-1.8B大模型实现RAG检索增强生成，为模型注入外部知识库。
 ---
 
 # 一、前置知识

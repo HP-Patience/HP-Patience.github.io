@@ -3,10 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Celyn_blog
-subtitle: ''
-description: 费曼学习法，反思近期所学并反馈输出，将所学知识内化。
-keywords: 学习记录
+title: Celyn_blog | AI学习与技术分享
+subtitle: AI大模型学习、技术教程、编程经验分享
+description: 专注于AI大模型、深度学习、编程技术的学习博客，分享费曼学习法实践与技术成长之路。
+keywords: AI大模型,深度学习,编程技术,Python,机器学习,技术博客,学习记录
 author: Celyn
 language: zh-CN
 timezone: Asia/Shanghai
@@ -16,7 +16,7 @@ timezone: Asia/Shanghai
 
 url: https://hp-patience.github.io
 
-permalink: :year/:month/:day/:title/
+permalink: :category/:title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -121,6 +121,17 @@ search:
   path: search.xml
   field: post
   content: true
+
+# Sitemap配置
+sitemap:
+  path: sitemap.xml
+  rel: true
+  tags: true
+  categories: true
+
+# Baidu Sitemap配置
+baidusitemap:
+  path: baidusitemap.xml
 
 # Live2D 看你鼠标的 看板娘
 ## https://github.com/EYHN/hexo-helper-live2d
