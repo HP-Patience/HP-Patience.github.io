@@ -133,6 +133,16 @@ sitemap:
 baidusitemap:
   path: baidusitemap.xml
 
+# 图片懒加载配置
+lazyload:
+  enable: true
+  onlypost: false
+  loadingImg: /img/loading.svg
+
+# WebP图片优化
+webp:
+  enable: true
+
 # Live2D 看你鼠标的 看板娘
 ## https://github.com/EYHN/hexo-helper-live2d
 live2d:
