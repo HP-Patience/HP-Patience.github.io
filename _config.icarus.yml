@@ -3,8 +3,8 @@ variant: default
 
 head:
     meta:
-        keywords: 'AI大模型,深度学习,编程技术,Python,机器学习,技术博客,学习记录'
-        description: '专注于AI大模型、深度学习、编程技术的学习博客，分享费曼学习法实践与技术成长之路。'
+        - '<meta name="keywords" content="AI大模型,深度学习,编程技术,Python,机器学习,技术博客,学习记录" />'
+        - '<meta name="description" content="专注于AI大模型、深度学习、编程技术的学习博客，分享费曼学习法实践与技术成长之路。" />'
     manifest:
         name: 'Celyn_blog'
         short_name: 'Celyn'
