@@ -40,7 +40,7 @@
     "markdown-it-expandable": "^1.0.2",
     "markdown-it-imsize": "^2.0.1",
     "markdown-it-katex": "^2.0.3",
-    "mermaid": "^10.7.0",
+    "mermaid": "^11.15.0",
     "semver": "^7.7.4"
   }
 }
