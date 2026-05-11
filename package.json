@@ -41,6 +41,6 @@
     "markdown-it-imsize": "^2.0.1",
     "markdown-it-katex": "^2.0.3",
     "mermaid": "^10.7.0",
-    "semver": "^7.7.4"
+    "semver": "^7.8.0"
   }
 }
