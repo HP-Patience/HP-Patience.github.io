@@ -117,7 +117,25 @@
                 $(this).attr('id', id);
                 $(this).find('figcaption div.level-right').append(button);
             });
-            new ClipboardJS('.highlight .copy'); // eslint-disable-line no-new
+            new ClipboardJS('.highlight .copy').on('success', function(e) {
+                const button = e.trigger;
+                const icon = button.querySelector('i');
+                icon.classList.remove('fa-copy');
+                icon.classList.add('fa-check');
+                button.classList.add('copied');
+                e.clearSelection();
+                setTimeout(function() {
+                    icon.classList.remove('fa-check');
+                    icon.classList.add('fa-copy');
+                    button.classList.remove('copied');
+                }, 2000);
+            }).on('error', function(e) {
+                const button = e.trigger;
+                button.classList.add('error');
+                setTimeout(function() {
+                    button.classList.remove('error');
+                }, 2000);
+            });
         }
 
         if (fold) {

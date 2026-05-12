@@ -16,6 +16,22 @@ figure.highlight
 
     .copy
         opacity: .7
+        cursor: pointer
+        transition: all 0.3s ease
+
+        &:hover
+            opacity: 1
+
+        &.copied
+            color: #48c774
+            opacity: 1
+
+            i::before
+                content: '\f00c'
+
+        &.error
+            color: #f14668
+            opacity: 1
 
     pre, table tr:hover
         color: inherit
@@ -35,10 +51,13 @@ figure.highlight
 
     pre
         padding: 0
-        overflow: visible
+        overflow-x: auto
+        max-width: 100%
 
         .line, code .hljs
             line-height: 1.5rem
+            word-break: break-all
+            white-space: pre-wrap
 
     figcaption, .gutter
         background: $codeblock-caption-bg

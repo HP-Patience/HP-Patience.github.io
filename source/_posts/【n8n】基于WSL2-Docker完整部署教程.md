@@ -137,7 +137,7 @@ docker volume create n8n_data
 ```
 2. 启动 n8n 容器（时区设为上海、端口映射、数据持久化）
 ```
-docker run -it --rm ` --name n8n ` -p 5678:5678 ` -e GENERIC_TIMEZONE="Asia/Shanghai" ` -e TZ="Asia/Shanghai" ` -v n8n_data:/home/node/.n8n ` n8nio/n8n
+docker run -d ` --name n8n ` -p 5678:5678 ` -e GENERIC_TIMEZONE="Asia/Shanghai" ` -e TZ="Asia/Shanghai" ` -v n8n_data:/home/node/.n8n ` n8nio/n8n
 ```
 
 3. 访问地址
