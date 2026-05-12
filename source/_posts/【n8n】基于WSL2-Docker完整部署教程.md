@@ -1,5 +1,5 @@
 ---
-title: 【n8n】基于WSL2+Docker完整部署教程
+title: 【n8n】基于WSL2-Docker完整部署教程
 date: 2026-05-12 12:22:27
 tags:
   - agent
