@@ -5,8 +5,8 @@ tags:
 - 机器学习
 categories: 
 - 🍉Book
-description: 西瓜书-第六章-学习笔记 #文章描述
-swiper_index: 61 #置顶轮播图顺序，非负整数，数字越大越靠前
+description: 西瓜书-第六章-学习笔记
+
 ---
 
 # 章节介绍
