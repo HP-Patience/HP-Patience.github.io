@@ -26,7 +26,9 @@
 
     // Listen for completion of Pjax
     document.addEventListener('pjax:complete', function() {
-        // 重新初始化评论系统
+        if (window.MathJax && window.MathJax.typesetPromise) {
+            window.MathJax.typesetPromise();
+        }
         var commentContainer = document.querySelector('.comment-container');
         if (!commentContainer) return;
         
