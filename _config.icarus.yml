@@ -79,6 +79,7 @@ widgets:
       type: toc
       include: ['post']
       post: true
+      index: false
       collapsed: false
     - position: left
       type: categories
