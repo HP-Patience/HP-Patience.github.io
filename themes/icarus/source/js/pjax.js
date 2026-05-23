@@ -33,6 +33,12 @@
             window.MathJax.typesetPromise();
         }
 
+        // 重新初始化头像卡片 3D 效果
+        if (window.AvatarCard) {
+            window.AvatarCard.destroy();
+            window.AvatarCard.init();
+        }
+
         // 重新初始化代码框复制按钮（增强版）
         initCodeBlockCopyButton();
 
