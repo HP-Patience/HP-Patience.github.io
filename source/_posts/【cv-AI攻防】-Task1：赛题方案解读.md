@@ -3,6 +3,7 @@ title: 【cv-AI攻防】-Task1：赛题方案解读
 date: 2024-10-12 22:27:14
 tags:
 - 计算机视觉
+description: CV-AI攻防竞赛Task1方案解读，基于YOLO构建分割数据集并完成目标检测任务实战。
 ---
 
 # 步骤一：构建YOLO数据集

@@ -5,6 +5,7 @@ tags:
 - Hexo
 categories: 
 - Blog搭建
+description: Hexo博客Front-matter元数据配置参考模板，包含页面和文章页常用参数说明。
 ---
 
 `Front-matter` 是 markdown 文件最上方以`---`分隔的区域，用于指定个别档案的变数

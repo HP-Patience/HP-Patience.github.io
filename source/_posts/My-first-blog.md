@@ -6,6 +6,7 @@ categories:
 tags:
 - 随笔
 hidden: true
+description: 博客搭建成功纪念文章，记录个人技术博客的首次部署。
 ---
 
 

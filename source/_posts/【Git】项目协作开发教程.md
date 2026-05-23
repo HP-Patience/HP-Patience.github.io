@@ -2,7 +2,10 @@
 title: 【Git】项目协作开发教程
 date: 2026-05-19 03:07:51
 tags:
+- Git
+- 协作开发
 cover: /img/Git_workflow_visualization_with_commits_and_branches.png
+description: GitHub协作开发全流程指南，从Conventional Commit规范到Fork+PR贡献代码的标准化操作。
 ---
 
 
