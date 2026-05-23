@@ -5,78 +5,73 @@
 
 /* 防止复制按钮点击时选中代码文本 */
 figure.highlight .copy {
-    /* 基础样式优化 */
     opacity: 0.7;
     cursor: pointer;
     transition: all 0.3s ease;
-    user-select: none;  /* 防止按钮文字被选中 */
+    user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
-    
-    /* 按钮尺寸和定位 */
     padding: 4px 8px;
     font-size: 14px;
     color: #363636;
-    
-    &:hover {
-        opacity: 1;
-        transform: scale(1.05);
-        color: #00d1b2;
-    }
-    
-    /* 复制成功状态 - 增强视觉效果 */
-    &.copied {
-        color: #48c774 !important;
-        opacity: 1 !important;
-        animation: copySuccess 0.6s ease;
-        
-        i {
-            &::before {
-                content: '\f00c' !important;  /* 对勾图标 */
-            }
-        }
-        
-        /* 成功提示背景 */
-        &::after {
-            content: '已复制!';
-            position: absolute;
-            right: 100%;
-            top: 50%;
-            transform: translateY(-50%);
-            margin-right: 8px;
-            background: #48c774;
-            color: white;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 12px;
-            white-space: nowrap;
-            animation: fadeInOut 2s ease forwards;
-        }
-    }
-    
-    /* 复制失败状态 */
-    &.error {
-        color: #f14668 !important;
-        opacity: 1 !important;
-        animation: copyError 0.6s ease;
-        
-        &::after {
-            content: '复制失败';
-            position: absolute;
-            right: 100%;
-            top: 50%;
-            transform: translateY(-50%);
-            margin-right: 8px;
-            background: #f14668;
-            color: white;
-            padding: 2px 8px;
-            border-radius: 4px;
-            font-size: 12px;
-            white-space: nowrap;
-            animation: fadeInOut 2s ease forwards;
-        }
-    }
+}
+
+figure.highlight .copy:hover {
+    opacity: 1;
+    transform: scale(1.05);
+    color: #00d1b2;
+}
+
+/* 复制成功状态 */
+figure.highlight .copy.copied {
+    color: #48c774 !important;
+    opacity: 1 !important;
+    animation: copySuccess 0.6s ease;
+}
+
+figure.highlight .copy.copied i::before {
+    content: '\f00c' !important;
+}
+
+/* 成功提示 */
+figure.highlight .copy.copied::after {
+    content: '已复制!';
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 8px;
+    background: #48c774;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    animation: fadeInOut 2s ease forwards;
+}
+
+/* 复制失败状态 */
+figure.highlight .copy.error {
+    color: #f14668 !important;
+    opacity: 1 !important;
+    animation: copyError 0.6s ease;
+}
+
+figure.highlight .copy.error::after {
+    content: '复制失败';
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 8px;
+    background: #f14668;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    animation: fadeInOut 2s ease forwards;
 }
 
 /* 确保figcaption支持相对定位（用于提示框） */
@@ -100,27 +95,26 @@ figure.highlight figcaption {
 
 /* 提示框淡入淡出 */
 @keyframes fadeInOut {
-    0% { 
-        opacity: 0; 
+    0% {
+        opacity: 0;
         transform: translateY(-50%) translateX(10px);
     }
-    20% { 
-        opacity: 1; 
+    20% {
+        opacity: 1;
         transform: translateY(-50%) translateX(0);
     }
-    80% { 
-        opacity: 1; 
+    80% {
+        opacity: 1;
         transform: translateY(-50%) translateX(0);
     }
-    100% { 
-        opacity: 0; 
+    100% {
+        opacity: 0;
         transform: translateY(-50%) translateX(-10px);
     }
 }
 
 /* 代码块整体优化 */
 figure.highlight {
-    /* 防止代码块被意外全选 */
     -webkit-user-select: text;
     -moz-user-select: text;
     -ms-user-select: text;

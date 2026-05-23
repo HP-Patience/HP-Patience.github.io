@@ -1,6 +1,7 @@
 (function() {
     // eslint-disable-next-line no-unused-vars
     let pjax;
+    let pjaxClipboard = null;
 
     function initPjax() {
         try {
@@ -75,6 +76,20 @@
 
                 console.log(`[PJAX] Found ${codeBlocks.length} code blocks, initializing copy buttons...`);
 
+                // 添加 hljs CSS 类名，确保语法高亮样式生效
+                codeBlocks.forEach(function(block) {
+                    block.classList.add('hljs');
+                    block.querySelectorAll('.code .line span').forEach(function(span) {
+                        var classes = span.className.split(/\s+/);
+                        for (var i = 0; i < classes.length; i++) {
+                            if (classes[i]) {
+                                span.classList.add('hljs-' + classes[i]);
+                                span.classList.remove(classes[i]);
+                            }
+                        }
+                    });
+                });
+
                 // 移除旧的复制按钮
                 codeBlocks.forEach(block => {
                     block.querySelectorAll('.copy').forEach(btn => btn.remove());
@@ -85,13 +100,29 @@
                     const id = 'code-pjax-' + Date.now() + '-' + index + '-' + (Math.random() * 1000 | 0);
                     block.setAttribute('id', id);
 
-                    // 确保 figcaption 存在
+                    // 确保 figcaption 存在并具有正确的 Bulma 布局
                     let figcaption = block.querySelector('figcaption');
                     if (!figcaption) {
                         figcaption = document.createElement('figcaption');
                         figcaption.className = 'level is-mobile';
                         figcaption.innerHTML = '<div class="level-left"></div><div class="level-right"></div>';
                         block.prepend(figcaption);
+                    } else {
+                        figcaption.classList.add('level', 'is-mobile');
+                        if (!figcaption.querySelector('.level-left')) {
+                            var levelLeft = document.createElement('div');
+                            levelLeft.className = 'level-left';
+                            var existingSpan = figcaption.querySelector('span');
+                            if (existingSpan) levelLeft.appendChild(existingSpan);
+                            figcaption.insertBefore(levelLeft, figcaption.firstChild);
+                        }
+                        if (!figcaption.querySelector('.level-right')) {
+                            var levelRight = document.createElement('div');
+                            levelRight.className = 'level-right';
+                            var existingLink = figcaption.querySelector('a');
+                            if (existingLink) levelRight.appendChild(existingLink);
+                            figcaption.appendChild(levelRight);
+                        }
                     }
 
                     let levelRight = figcaption.querySelector('.level-right');
@@ -111,8 +142,11 @@
                     levelRight.appendChild(button);
                 });
 
-                // 初始化 ClipboardJS 实例
-                new ClipboardLib('.highlight .copy')
+                // 初始化 ClipboardJS 实例（先销毁旧实例防止泄漏）
+                if (pjaxClipboard) {
+                    pjaxClipboard.destroy();
+                }
+                pjaxClipboard = new ClipboardLib('.highlight .copy')
                     .on('success', function(e) {
                         console.log('[PJAX] Copy success!');
                         const button = e.trigger;
@@ -177,7 +211,7 @@
                 caption.remove();
             });
 
-            document.querySelectorAll('.article img:not(".not-gallery-item")').forEach(function(img) {
+            document.querySelectorAll('.article img:not(.not-gallery-item)').forEach(function(img) {
                 if (!img.closest('a')) {
                     const link = document.createElement('a');
                     link.className = 'gallery-item';
@@ -228,11 +262,10 @@
         var commentConfig = commentContainer.getAttribute('data-comment-config');
 
         if (commentType === 'utterances' && commentConfig) {
-            // 清除旧的评论
-            commentContainer.innerHTML = '';
-
             try {
                 var config = JSON.parse(commentConfig);
+                // 清除旧的评论
+                commentContainer.innerHTML = '';
                 var script = document.createElement('script');
                 script.src = 'https://utteranc.es/client.js';
                 script.setAttribute('repo', config.repo);
@@ -279,39 +312,8 @@
                     e.preventDefault();
                     e.stopPropagation();
 
-                    // 调用全局的黑暗模式切换函数
                     if (typeof window.toggleNightMode === 'function') {
                         window.toggleNightMode();
-                    } else if (typeof toggleNightMode === 'function') {
-                        toggleNightMode();
-                    } else {
-                        // 如果全局函数不存在，手动实现切换逻辑
-                        var isNight = localStorage.getItem('night') || 'false';
-                        isNight = isNight === 'true' ? 'false' : 'true';
-                        localStorage.setItem('night', isNight);
-
-                        // 应用样式
-                        if (isNight === 'true') {
-                            document.body.classList.add('night');
-                            document.body.classList.remove('light');
-                            document.documentElement.classList.add('night-mode');
-                        } else {
-                            document.body.classList.remove('night');
-                            document.body.classList.add('light');
-                            document.documentElement.classList.remove('night-mode');
-                        }
-
-                        // 更新图标
-                        var nightIcon = document.getElementById('night-icon');
-                        if (nightIcon) {
-                            if (isNight === 'true') {
-                                nightIcon.className = 'fas fa-lightbulb';
-                            } else {
-                                nightIcon.className = 'fas fa-moon';
-                            }
-                        }
-
-                        console.log('[PJAX] Night mode toggled to:', isNight);
                     }
                 };
 
