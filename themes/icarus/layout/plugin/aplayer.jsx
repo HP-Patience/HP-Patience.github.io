@@ -48,7 +48,7 @@ class APlayer extends Component {
                             },
                             {
                                 name: "Kingdom Hearts \\u2022 Xion\\'s Theme",
-                                artist: 'Jenny',
+                                artist: 'Yoko Shimomura',
                                 url: '${musicPath}Kingdom%20Hearts%20%E2%80%A2%20Xion\\'s%20Theme.mp3',
                                 cover: '${musicPath}Kingdom%20Hearts%20%E2%80%A2%20Xion\\'s%20Theme.jpg'
                             }
