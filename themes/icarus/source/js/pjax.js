@@ -39,6 +39,12 @@
             window.AvatarCard.init();
         }
 
+        // 重新初始化活动热力图
+        if (window.BlogHeatmap) {
+            window.BlogHeatmap.destroy();
+            window.BlogHeatmap.init();
+        }
+
         // 重新初始化代码框复制按钮（增强版）
         initCodeBlockCopyButton();
 

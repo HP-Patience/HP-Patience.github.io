@@ -70,6 +70,9 @@ widgets:
               icon: fas fa-rss
               url: /atom.xml
     - position: left
+      type: heatmap
+      title: 活动热力图
+    - position: left
       type: links
       exclude: ['post']
       links:

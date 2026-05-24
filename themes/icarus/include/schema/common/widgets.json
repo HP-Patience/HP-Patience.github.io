@@ -17,6 +17,9 @@
                 "$ref": "/widget/profile.json"
             },
             {
+                "$ref": "/widget/heatmap.json"
+            },
+            {
                 "$ref": "/widget/toc.json"
             },
             {
