@@ -140,6 +140,7 @@ plugins:
     back_to_top: true
     pjax: true
     aplayer: true
+    busuanzi: true
     # cookie_consent:
     #     type: info
     #     theme: edgeless

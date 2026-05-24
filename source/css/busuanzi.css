@@ -1,0 +1,4 @@
+/* Hide site-wide UV counter in footer, keep per-article PV counter */
+#busuanzi_container_site_uv {
+  display: none !important;
+}
