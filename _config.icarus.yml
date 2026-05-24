@@ -45,7 +45,7 @@ sidebar:
     left:
         sticky: false
     right:
-        sticky: false
+        sticky: true
 
 widgets:
     - position: left
@@ -78,7 +78,7 @@ widgets:
       links:
           Hexo: https://hexo.io
           Icarus: https://github.com/ppoffice/hexo-theme-icarus
-    - position: left
+    - position: right
       type: toc
       include: ['post']
       post: true

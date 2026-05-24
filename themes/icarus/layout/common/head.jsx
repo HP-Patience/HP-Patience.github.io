@@ -180,6 +180,7 @@ module.exports = class extends Component {
             <link rel="stylesheet" href={url_for('/css/codeblock-copy-fix.css')} />
             <link rel="stylesheet" href={url_for('/css/avatar-card.css')} />
             <link rel="stylesheet" href={url_for('/css/heatmap.css')} />
+            <link rel="stylesheet" href={url_for('/css/toc-right.css')} />
             <link rel="stylesheet" href={cdn('lightgallery', '2.7.2', 'css/lightgallery-bundle.min.css')} />
             <script dangerouslySetInnerHTML={{ __html: `MathJax={tex:{inlineMath:[['$','$'],['\\\\(','\\\\)']],displayMath:[['$$','$$'],['\\\\[','\\\\]']]},options:{ignoreClass:'no-mathjax'}}` }}></script>
             <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" defer></script>

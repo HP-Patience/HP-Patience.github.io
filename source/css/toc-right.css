@@ -1,0 +1,26 @@
+/* TOC 右侧边栏: 在 desktop 断点下显示右列并调整列宽 */
+@media screen and (min-width: 1088px) {
+    /* 覆盖 is-hidden-desktop-only，在 desktop 范围显示右列 */
+    .page-post .column-right.is-hidden-desktop-only {
+        display: block !important;
+    }
+
+    /* 3 列布局修正: 左 25% / 主 50% / 右 25% = 100% */
+    .page-post .column-left.is-4-desktop {
+        flex: none;
+        width: 25%;
+    }
+    .page-post .column-main.is-8-desktop {
+        flex: none;
+        width: 50%;
+    }
+    .page-post .column-right.is-4-desktop {
+        flex: none;
+        width: 25%;
+    }
+
+    /* 隐藏 shadow-clone，防止 TOC 在左列底部重复出现 */
+    .page-post .column-right-shadow {
+        display: none !important;
+    }
+}
