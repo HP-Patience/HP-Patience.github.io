@@ -137,7 +137,7 @@
                         }
                     }
 
-                    let levelRight = figcaption.querySelector('.level-right');
+                    var levelRight = figcaption.querySelector('.level-right');
                     if (!levelRight) {
                         levelRight = document.createElement('div');
                         levelRight.className = 'level-right';

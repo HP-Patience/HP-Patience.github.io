@@ -13,10 +13,16 @@ class APlayer extends Component {
             (function() {
                 function initAPlayer() {
                     if (typeof APlayer === 'undefined') return;
-                    // 如果已经存在APlayer实例，不要重新创建
-                    if (document.getElementById('aplayer') && window.aplayerInstance) {
+                    // 全局标记：确保 APlayer 在整个页面会话中只初始化一次
+                    // PJAX 导航会重新执行此脚本，通过此标记阻止重复创建
+                    if (window.__aplayerInitialized) {
+                        // 防御性检查：确保容器仍在 DOM 中（可能被意外移除）
+                        if (!document.getElementById('aplayer') && window.aplayerInstance) {
+                            document.body.appendChild(window.aplayerInstance.container);
+                        }
                         return;
                     }
+                    window.__aplayerInitialized = true;
                     // 如果存在旧容器但无实例，先清理
                     var oldContainer = document.getElementById('aplayer');
                     if (oldContainer) {
@@ -61,7 +67,7 @@ class APlayer extends Component {
                 } else {
                     initAPlayer();
                 }
-                // PJAX兼容：PJAX完成后检查是否需要初始化
+                // PJAX兼容：PJAX完成后检查是否需要恢复容器
                 document.addEventListener('pjax:complete', function() {
                     setTimeout(initAPlayer, 100);
                 });
