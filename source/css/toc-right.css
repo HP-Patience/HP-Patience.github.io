@@ -24,3 +24,67 @@
         display: none !important;
     }
 }
+
+/* ── TOC Heading Folding ──────────────────────────────────────── */
+
+/*
+ * 对齐策略：toggle 使用绝对定位，不参与 flex 流。
+ * 这样无论标题是否有子级，同级标题文字始终对齐。
+ * toggle 定位在文字左侧 18px 处（即 Bulma .menu-list a 的左侧空白区）。
+ */
+
+/* 为 toggle 提供定位锚点 */
+#toc .has-children > a > .level-left {
+    position: relative;
+}
+
+/* toggle 脱离 flex 流，绝对定位到文字左侧 */
+#toc .has-children > a > .level-left > .toc-toggle {
+    position: absolute;
+    left: -18px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* 箭头图标: CSS border 三角 → 展开时指向右下 (▼) */
+#toc .has-children > a > .level-left > .toc-toggle::after {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-right: 1.5px solid #7a7a7a;
+    border-bottom: 1.5px solid #7a7a7a;
+    transform: rotate(45deg);
+    transition: transform 0.2s ease;
+}
+
+/* 折叠状态: 箭头指向右侧 (▶) */
+#toc .has-children.is-collapsed > a > .level-left > .toc-toggle::after {
+    transform: rotate(-45deg);
+}
+
+/* 折叠状态: 隐藏子级菜单 */
+#toc .has-children.is-collapsed > .menu-list {
+    display: none;
+}
+
+/*
+ * 间距一致性：去除嵌套 ul 的上下 margin（Bulma 默认 margin: 0.75em），
+ * 使父↔子间距 = 同级间距 = 末级子↔下一父间距，全部由 <a> 的 padding (0.5em) 决定。
+ */
+#toc .has-children > .menu-list {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* 暗色模式箭头颜色 */
+.night #toc .has-children > a > .level-left > .toc-toggle::after {
+    border-right-color: #8a8a8a;
+    border-bottom-color: #8a8a8a;
+}
