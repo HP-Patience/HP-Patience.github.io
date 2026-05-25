@@ -155,8 +155,16 @@
             tooltip.textContent = cell.getAttribute('data-date') + ' ' +
                 cell.getAttribute('data-count') + ' 篇';
             tooltip.style.display = 'block';
-            tooltip.style.left = (rect.left + rect.width / 2) + 'px';
-            tooltip.style.top = (rect.top - 6) + 'px';
+            // 先显示才能测量 tooltip 高度
+            var th = tooltip.offsetHeight;
+            var left = rect.left + rect.width / 2;
+            var top = rect.top - 6;
+            // 钳制到视口内
+            if (top - th < 0) top = rect.bottom + 6;
+            if (left < 8) left = 8;
+            if (left > window.innerWidth - 8) left = window.innerWidth - 8;
+            tooltip.style.left = left + 'px';
+            tooltip.style.top = top + 'px';
         });
 
         grid.addEventListener('mouseleave', function () {

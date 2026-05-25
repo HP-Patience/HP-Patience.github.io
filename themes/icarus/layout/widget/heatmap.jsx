@@ -45,6 +45,7 @@ Heatmap.Cacheable = cacheComponent(Heatmap, 'widget.heatmap', props => {
     }
 
     site.posts.forEach(post => {
+        const seen = new Set();
         [post.date, post.updated].forEach(dateVal => {
             if (!dateVal) return;
             const val = dateVal instanceof Date ? dateVal : new Date(dateVal);
@@ -53,7 +54,10 @@ Heatmap.Cacheable = cacheComponent(Heatmap, 'widget.heatmap', props => {
                 const key = val.getFullYear() + '-' +
                     String(val.getMonth() + 1).padStart(2, '0') + '-' +
                     String(val.getDate()).padStart(2, '0');
-                if (key in dailyCount) dailyCount[key]++;
+                if (!seen.has(key) && key in dailyCount) {
+                    dailyCount[key]++;
+                    seen.add(key);
+                }
             }
         });
     });

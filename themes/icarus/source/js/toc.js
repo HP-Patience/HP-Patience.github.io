@@ -28,7 +28,7 @@
         $heading = [...currentInView].sort(($el1, $el2) => $el1.offsetTop - $el2.offsetTop)[0];
       } else if ($headings.length) {
         $heading = $headings
-          .filter(($heading) => $heading.offsetTop < window.scrollY)
+          .filter(($heading) => $heading.getBoundingClientRect().top < 0)
           .sort(($el1, $el2) => $el2.offsetTop - $el1.offsetTop)[0];
       }
       if ($heading && headingToMenu.has($heading)) {
@@ -36,6 +36,8 @@
 
         const $menu = headingToMenu.get($heading);
         $menu.classList.add('is-active');
+        // 守卫: PJAX 导航后旧 observer 的待处理回调可能持有已分离的 DOM 节点
+        if (!$menu.parentElement) return;
         let $menuList = $menu.parentElement.parentElement;
         while (
           $menuList.classList.contains('menu-list') &&

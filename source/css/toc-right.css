@@ -1,3 +1,17 @@
+/*
+ * 覆盖 is-hidden-touch，防止右列 display:none 阻止移动端 TOC 覆盖层渲染。
+ * CSS 规范：父级 display:none 会抑制所有子级（包括 position:fixed），
+ * 导致移动端点击「目录」按钮后只显示遮罩，TOC 内容不可见。
+ */
+.page-post .column-right.is-hidden-touch {
+    display: block !important;
+}
+
+/* 全断点隐藏 shadow-clone，防止 TOC 在左列底部重复出现（平板端 769-1087px 无覆盖） */
+.page-post .column-right-shadow {
+    display: none !important;
+}
+
 /* TOC 右侧边栏: 在 desktop 断点下显示右列并调整列宽 */
 @media screen and (min-width: 1088px) {
     /* 覆盖 is-hidden-desktop-only，在 desktop 范围显示右列 */
@@ -17,11 +31,6 @@
     .page-post .column-right.is-4-desktop {
         flex: none;
         width: 25%;
-    }
-
-    /* 隐藏 shadow-clone，防止 TOC 在左列底部重复出现 */
-    .page-post .column-right-shadow {
-        display: none !important;
     }
 }
 
