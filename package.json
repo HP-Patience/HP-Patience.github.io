@@ -12,7 +12,7 @@
     "version": "7.3.0"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.5.1",
+    "@fortawesome/fontawesome-free": "^7.3.0",
     "animejs": "^3.2.2",
     "hexo": "^7.2.0",
     "hexo-admin": "^2.3.0",
